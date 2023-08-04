@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+/fsh-generated
+/input-cache
+/output
+/temp
+/template
+/output
+!/output/full-ig.zip
+/node_modules
+/localscripts
