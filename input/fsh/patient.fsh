@@ -1,4 +1,4 @@
-Profile: NZIPS-Patient
+Profile: NZIPSPatient
 Parent: http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
 Id: nzips-patient
 Description: "NZ International Patient Summary patient resource. This profile derives from the [International Patient summary](https://build.fhir.org/ig/HL7/fhir-ips/) with localisations using international and NZ standards including the [FHIR NZ Base IG](https://fhir.org.nz), for use in the NZ context."
@@ -6,13 +6,13 @@ Description: "NZ International Patient Summary patient resource. This profile de
 * ^url = "https://standards.digital.health.nz/fhir/StructureDefinition/nzips-patient"
 
 // gender original text - extension from http://hl7.org/fhir/R4B/extension-originaltext.html
-* gender.extension contains http://hl7.org/fhir/StructureDefinition/originalText named originalText 0..1 
+//* gender.extension contains http://hl7.org/fhir/StructureDefinition/originalText named originalText 0..1 
 
 * extension contains 
     http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity named ethnicity 0..* and
     http://hl7.org.nz/fhir/StructureDefinition/maori-descent named maori-descent 0..1 and
     http://hl7.org.nz/fhir/StructureDefinition/nz-iwi named iwi 0..* and
-    http://hl7.org.nz/fhir/StructureDefinition/country-of-birth named birth-country 0..1
+    http://hl7.org/fhir/StructureDefinition/patient-birthPlace named birth-country 0..1
 
 // identifier slice for nhi
 * identifier ^slicing.discriminator.type = #value
