@@ -1,6 +1,6 @@
 # FHIR NZ IPS
 
-This FHIR implementation guide (IG) defines the draft FHIR translation of the HISO 10099:2022 NZ International Patient Summary (NZIPS) standard. This version of the FHIR IG is based on the draft [HISO standard](https://consult.health.govt.nz/hiso/hiso-10099-2022-nzips/supporting_documents/hiso10099nzipsdraft20220509.pdf) published for consultation in May & July 2022. 
+This FHIR implementation guide (IG) defines the draft FHIR translation of the [HISO 10099:2022 NZ International Patient Summary (NZIPS) standard](https://consult.health.govt.nz/hiso/hiso-10099-2022-nzips/supporting_documents/hiso10099nzipsdraft20220509.pdf) published for consultation in May & July 2022. 
 
 The mahi to develop HISO 10099:2022 NZIPS standard has been guided by an expert advisory group and industry special interest group, comprising health
 professionals, software experts and consumer representatives who have worked with HISO since October 2021 to review drafts and
