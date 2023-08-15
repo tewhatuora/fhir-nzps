@@ -1,3 +1,5 @@
+<p style ="color:#ff0000; padding:10px; border-left:3px solid #ff0000;"> This draft is under active development and many of the requirements have yet to be to translated to FHIR profiles.</p>
+
 # FHIR NZ IPS
 
 This FHIR implementation guide (IG) defines the draft FHIR translation of the [HISO 10099:2022 NZ International Patient Summary (NZIPS) standard](https://consult.health.govt.nz/hiso/hiso-10099-2022-nzips/supporting_documents/hiso10099nzipsdraft20220509.pdf) published for consultation in May & July 2022. 
