@@ -1,18 +1,42 @@
 Profile: NZIPSPatient
 Parent: http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
 Id: nzips-patient
-Description: "NZ International Patient Summary patient resource. This profile derives from the [International Patient summary](https://build.fhir.org/ig/HL7/fhir-ips/) with localisations using international and NZ standards including the [FHIR NZ Base IG](https://fhir.org.nz), for use in the NZ context."
+Description: "The NZ International Patient Summary patient resource. This profile derives from the [International Patient summary](https://build.fhir.org/ig/HL7/fhir-ips/) with localisations using international and NZ standards including the [FHIR NZ Base IG](https://fhir.org.nz), for use in the NZ context.
+
+**Included Data**
+
+The person’s name, birth date and contact details, plus other identity, demographic, eligibility and enrolment information as recorded in the National Health Index (NHI) and National Enrolment System (NES) for everyone receiving public health services. The NHI number is the national health identifier and key to this information.
+
+**Usage and Interoperability**
+
+This data enables the person to engage with the health system and receive health services in person and online. Information is shared with the health system in secure and privacy-protecting ways to prove identity and eligibility, and to receive the right services. Having good demographic data is important to population health and public health.
+
+**Key use cases**
+
+- Identity, eligibility and enrolment
+- Bookings and appointments
+- Identifying people at risk by ethnicity, age, location, etc
+- Patient record transfer
+- Consumer access
+- Population health and public health
+"
 
 * ^url = "https://standards.digital.health.nz/fhir/StructureDefinition/nzips-patient"
 
 // gender original text - extension from http://hl7.org/fhir/R4B/extension-originaltext.html
 //* gender.extension contains http://hl7.org/fhir/StructureDefinition/originalText named originalText 0..1 
 
+// switched to line up with NHI 
+//The gender has an extension for the original text that was used to establish it (eg from a form)
+* gender.extension contains 
+    $originalText named originalText 0..1
+
+// note using HL7 international birthplace extension. This doesn't line up with NHI exactly. 
 * extension contains 
-    http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity named ethnicity 0..* and
-    http://hl7.org.nz/fhir/StructureDefinition/maori-descent named maori-descent 0..1 and
-    http://hl7.org.nz/fhir/StructureDefinition/nz-iwi named iwi 0..* and
-    http://hl7.org/fhir/StructureDefinition/patient-birthPlace named birth-country 0..1
+    $ethnicity named ethnicity 0..6 and
+    $maori-descent named maori-descent 0..1 and
+    $nz-iwi named iwi 0..* and
+    $patient-birthPlace named birth-country 0..1
 
 // identifier slice for nhi
 * identifier ^slicing.discriminator.type = #value
@@ -47,4 +71,4 @@ Description: "NZ International Patient Summary patient resource. This profile de
 Invariant: nz-pat-1
 Expression: "Patient.identifier.where(system='https://standards.digital.health.nz/ns/nhi-id' and use='official').count() < 2"
 Severity: #error
-Description: "A patient can only have a single official NHI"
+Description: "A patient can only have a one official (i.e. 'live') NHI"

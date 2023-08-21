@@ -1,4 +1,4 @@
-<p style ="color:#ff0000; padding:10px; border-left:3px solid #ff0000;"> This draft is under active development and many of the requirements have yet to be to translated to FHIR profiles.</p>
+<p style ="color:#ff0000; padding:10px; border-left:3px solid #ff0000;"> This draft is under active development and many sections of the NZIPS draft have yet to be to translated to FHIR.</p>
 
 # FHIR NZ IPS
 
