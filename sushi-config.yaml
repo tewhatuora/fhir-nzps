@@ -47,7 +47,14 @@ dependencies:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
-# pages:
+pages:
+  index.md:
+    title: The FHIR NZIPS Implementation Guide
+  the-nzips.md: 
+    title: NZ IPS contents
+  artifacts.html:
+    title: FHIR Artifacts
+    
 #   index.md:
 #     title: Example Home
 #   implementation.xml:
@@ -80,7 +87,8 @@ dependencies:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Artifacts: artifacts.html
+  The NZIPS: the-nzips.html
+  FHIR artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
