@@ -37,6 +37,10 @@ This data enables the person to engage with the health system and receive health
     $maori-descent named maori-descent 0..1 and
     $nz-iwi named iwi 0..* and
     $patient-birthPlace named birth-country 0..1
+//    $imposeProfile named imposedProfile 1..1
+
+//* extension contains $imposeProfile named imposedProfile
+//* extension.imposeProfile ^valueCanonical = "http://hl7.org.nz/fhir/StructureDefinition/NzPatient"
 
 // identifier slice for nhi
 * identifier ^slicing.discriminator.type = #value
