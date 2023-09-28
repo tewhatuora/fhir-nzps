@@ -23,8 +23,11 @@ This data enables the person to engage with the health system and receive health
 
 * ^url = "https://standards.digital.health.nz/fhir/StructureDefinition/nzips-patient"
 
-// gender original text - extension from http://hl7.org/fhir/R4B/extension-originaltext.html
-//* gender.extension contains http://hl7.org/fhir/StructureDefinition/originalText named originalText 0..1 
+// suppress modifierExtension & contained
+* modifierExtension 0..0
+* contained 0..0
+* implicitRules 0..0
+
 
 // switched to line up with NHI 
 //The gender has an extension for the original text that was used to establish it (eg from a form)
@@ -51,6 +54,10 @@ This data enables the person to engage with the health system and receive health
 * identifier contains 
     NHI 0..1 MS and
     dormant 0..* MS
+
+// add nz address and nz telecom
+* address only NzAddress
+* telecom only NzContactPoint
 
 // details of live nhi slice
 * identifier[NHI].system = "https://standards.digital.health.nz/ns/nhi-id" (exactly)
