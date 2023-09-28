@@ -1,8 +1,9 @@
 Profile: NZIPSPatient
 Parent: http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
 Id: nzips-patient
-Description: "The NZ International Patient Summary patient resource. This profile derives from the [International Patient summary](https://build.fhir.org/ig/HL7/fhir-ips/) with localisations using international and NZ standards including the [FHIR NZ Base IG](https://fhir.org.nz), for use in the NZ context.
+Description: "The NZ International Patient Summary patient resource. This profile derives from the [International Patient summary](https://build.fhir.org/ig/HL7/fhir-ips/) with localisations using international and NZ standards including the [FHIR NZ Base IG](https://fhir.org.nz), for use in the NZ context."
 
+/* 
 **Included Data**
 
 The person’s name, birth date and contact details, plus other identity, demographic, eligibility and enrolment information as recorded in the National Health Index (NHI) and National Enrolment System (NES) for everyone receiving public health services. The NHI number is the national health identifier and key to this information.
@@ -18,8 +19,7 @@ This data enables the person to engage with the health system and receive health
 - Identifying people at risk by ethnicity, age, location, etc
 - Patient record transfer
 - Consumer access
-- Population health and public health
-"
+- Population health and public health */
 
 * ^url = "https://standards.digital.health.nz/fhir/StructureDefinition/nzips-patient"
 
