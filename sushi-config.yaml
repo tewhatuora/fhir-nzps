@@ -5,8 +5,8 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: tewhatuora.fhir.ig.fhir-nzips
 canonical: https://standards.digital.health.nz
-name: fhir-nzips
-title: FHIR New Zealand International Patient Summary IG
+name: fhir-nzps
+title: FHIR New Zealand Patient Summary IG
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
 version: 0.1.0
@@ -49,9 +49,9 @@ dependencies:
 #
 pages:
   index.md:
-    title: The FHIR NZIPS Implementation Guide
-  the-nzips.md: 
-    title: NZ IPS contents
+    title: The FHIR NZPS Implementation Guide
+  the-nzps.md: 
+    title: NZPS contents
   artifacts.html:
     title: FHIR Artifacts
     
@@ -87,7 +87,7 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  The NZIPS: the-nzips.html
+  The NZPS: the-nzps.html
   FHIR artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
