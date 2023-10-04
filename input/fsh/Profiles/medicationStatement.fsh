@@ -1,16 +1,18 @@
-Profile: NZIPSMedicationStatement
+Profile: NZPSMedicationStatement
 Parent: http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips
-Id: nzips-medicationstatement
-Title: "NZIPS-MedicationStatement"
+Id: nzps-medicationstatement
+Title: "NZPS-MedicationStatement"
 Description: "A record of medication being taken is represented in the patient summary as an instance of an MedicationStatement resource constrained by this profile. Based on the IPS profile."
 
 // some fields require the medication resource (e.g Medication batch number and Medication expiry date are recorded against a medication resource rather than the medication statement). Include?
 
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org.nz/fhir/StructureDefinition/NzMedicationStatement"
 
 * ^version = "0.1.0"
 * ^status = #active
 
-* ^url = "https://standards.digital.health.nz/fhir/StructureDefinition/nzips-medicationstatement"
+* ^url = "https://standards.digital.health.nz/fhir/StructureDefinition/nzps-medicationstatement"
 
 * medicationCodeableConcept.coding ^slicing.discriminator.type = #value
 * medicationCodeableConcept.coding ^slicing.discriminator.path = "system"

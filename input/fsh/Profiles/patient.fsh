@@ -1,6 +1,6 @@
-Profile: NZIPSPatient
+Profile: NZPSPatient
 Parent: http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
-Id: nzips-patient
+Id: nzps-patient
 Description: "The NZ International Patient Summary patient resource. This profile derives from the [International Patient summary](https://build.fhir.org/ig/HL7/fhir-ips/) with localisations using international and NZ standards including the [FHIR NZ Base IG](https://fhir.org.nz), for use in the NZ context."
 
 /* 
@@ -21,7 +21,7 @@ This data enables the person to engage with the health system and receive health
 - Consumer access
 - Population health and public health */
 
-* ^url = "https://standards.digital.health.nz/fhir/StructureDefinition/nzips-patient"
+* ^url = "https://standards.digital.health.nz/fhir/StructureDefinition/nzps-patient"
 
 // suppress modifierExtension & contained
 * modifierExtension 0..0
