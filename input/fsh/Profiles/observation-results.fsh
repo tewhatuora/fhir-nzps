@@ -1,4 +1,4 @@
-Profile: NZPSObservation-Results
+Profile: NZPSObservationResults
 Parent: http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-uv-ips
 Id: nzps-observation-results
 Title: "NZPS-Observation-Results"
