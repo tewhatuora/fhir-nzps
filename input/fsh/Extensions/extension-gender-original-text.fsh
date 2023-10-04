@@ -1,5 +1,6 @@
 Extension: OriginalText
 Id: gender-original-text
+Title: "Gender Original Text"
 Description: "The uncoded original text that was provided by the patient as their Gender"
 
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/gender-original-text"
