@@ -1,7 +1,7 @@
 NZPS is an extensible data set specification that will build on the set of data blocks presented here. New requirements can be
 expected to emerge from IPS’s own further development, as well as from local initiatives. The initial scope of the NZPS covers the content areas shown in the data blocks below. 
 
-{% include img.html img="initial-scope.png" caption="Figure 1: The NZPS initial contents" width="70%" %}
+{% include img.html img="initial-scope.png" caption="Figure 1: The NZPS initial contents" width="100%" %}
 
 <br />
 
@@ -26,6 +26,6 @@ In the future, the initial scope will be expanded to include new sections with a
 
 <br />
 
-{% include img.html img="future-scope.png" caption="Figure 2: The NZPS future scope" width="70%" %}
+{% include img.html img="future-scope.png" caption="Figure 2: The NZPS future scope" width="100%" %}
 
 <br />

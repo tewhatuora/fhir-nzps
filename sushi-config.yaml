@@ -54,6 +54,8 @@ pages:
     title: NZPS contents
   document-structure.md:
     title: NZPS Structure
+  mapping.md:
+    title: NZPS data blocks to FHIR resource mapping
   artifacts.html:
     title: FHIR Artifacts
     
@@ -91,6 +93,7 @@ menu:
   Home: index.html
   NZPS Content: the-nzps.html
   NZPS Structure: document-structure.html
+  NZPS Mapping to FHIR: mapping.html
   FHIR artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
