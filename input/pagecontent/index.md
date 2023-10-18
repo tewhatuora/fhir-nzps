@@ -26,6 +26,6 @@ elements and how they are represented.
 
 ## Dependencies and relationship to other standards
 
-The profiles in the NZPS are derived from the IPS profiles. The NZPS proflies also conform to constraints expressed in the [FHIR NZBase profiles](https://fhir.org.nz/ig/base/index.html). The IG has dependencies on the following packages: 
+The profiles in the NZPS are derived from the IPS profiles. The NZPS profiles also conform to constraints expressed in the [FHIR NZBase profiles](https://fhir.org.nz/ig/base/index.html). The IG has dependencies on the following packages: 
 
 {% include dependency-table.xhtml %}

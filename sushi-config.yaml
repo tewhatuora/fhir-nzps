@@ -52,6 +52,8 @@ pages:
     title: The FHIR NZPS Implementation Guide
   the-nzps.md: 
     title: NZPS contents
+  document-structure.md:
+    title: NZPS Structure
   artifacts.html:
     title: FHIR Artifacts
     
@@ -87,7 +89,8 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  The NZPS: the-nzps.html
+  NZPS Content: the-nzps.html
+  NZPS Structure: document-structure.html
   FHIR artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
