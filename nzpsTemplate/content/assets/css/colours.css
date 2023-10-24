@@ -3,7 +3,7 @@
     --navbar-bg-color: #15284c;  /* 2. Header container color */
     --footer-bg-color: #15284c; /* 3. Footer background color*/
     --footer-container-bg-color: #15284c;  /* 4. Footer container color */
-   /* --stripe-bg-color: #15284c; /* 5. Header strip color */
+    --stripe-bg-color: #eeeeee; /* 5. Header strip color */
     --btn-hover-color: #5d7296; /* 6. Menu button hover color */
     --btn-active-color: #93a3c2; /* 7. Menu button active color */
     --btn-text-color: #30a1ac; /* 8. Menu button text color */
@@ -13,7 +13,7 @@
   /*  --btn-gradient-end-color-alpha: #fa8072; /* 12. Menu item gradient end color (with alpha) */
      --link-color: #03578f; /* 13. Hyperlink text color */
   /* 14.  --link-hover-color: #8b0000; /* 14. Hyperlink text hover color */
-      --publish-box-bg-color: #30a1ac; /* 15. Publish box background color */
+      --publish-box-bg-color: #48dadf; /* 15. Publish box background color */
   /* 16.   --publish-box-border: 1px solid #ff4500;  Publish box border definition */
   /* 17.   --toc-box-bg-color: #98fb98; /* 17.  TOC box background color */
   /* 18.  --toc-box-border: 1px solid #2e8b57; /* 18. TOC box border definition */
