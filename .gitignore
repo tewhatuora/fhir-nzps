@@ -9,3 +9,5 @@ Thumbs.db
 !/output/full-ig.zip
 /node_modules
 /localscripts
+.index.db
+.index.json

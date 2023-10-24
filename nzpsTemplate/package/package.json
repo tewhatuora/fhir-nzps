@@ -1,0 +1,11 @@
+{
+    "name": "nzpsTemplate",
+    "version": "0.1.0",
+    "type": "fhir.template",
+    "license": "CC0-1.0",
+    "description": "Template for NZPS based on Te Whatu ora branding guidelines",
+    "base": "fhir.base.template",
+    "dependencies": {
+        "fhir.base.template": "current"
+    }
+}
