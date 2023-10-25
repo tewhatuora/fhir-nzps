@@ -1,13 +1,9 @@
 # NZIPS Profiling
 
-## Content areas
+## To do / clarify by content area
 
 ### Demographics
 
-FHIR Resources used
-* Patient
-
-To do/clarify:
 * NZ Ethnicity - should be moved to new NZbase version of ethnicity extension / valueset since we know it will change
 * Gender description - needs reconcile with NHI extension / adding to NZ base
 * birthPlace extension - use NHI (country/placeofbirth/source) or HL7 birthplace
@@ -15,10 +11,6 @@ To do/clarify:
 
 ### Problems
 
-FHIR Resources used
-* Condition
-
-To do/clarify
 * check terminology lines up
 
 ### Medications
@@ -43,19 +35,16 @@ To do/clarify
 
 ### Immunisations
 
-Resources
-* Immunization
-* organisation / practitioner/role / location
 
 To do/clarify
 
 * add nzmt
 * gtin
 * Vaccination country code - on location?
+* need org? use nzbase? or nzps profile?
 
 ### Vital Signs
 
-To do/clarify
 * check terminology 
 
 ### Diagnostic results
@@ -71,17 +60,11 @@ To do / clarify
 
 ### Careplan
 
-To do / clarify
 * Terminology reconicile
-* slice for HPI
+* reference typing?
 
 ### Encounters
 
-FHIR Resources used
-* Encounter
-
-To do / clarify
-* Create profile
 * Create slice/section in Composition
 * Identify section loinc code
 
