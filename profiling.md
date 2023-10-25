@@ -2,6 +2,14 @@
 
 ## To do / clarify by content area
 
+### functional status
+
+* include
+
+### advance directive
+
+* include
+
 ### Demographics
 
 * NZ Ethnicity - should be moved to new NZbase version of ethnicity extension / valueset since we know it will change

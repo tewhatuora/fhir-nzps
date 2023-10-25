@@ -30,8 +30,7 @@ This data enables the person to engage with the health system and receive health
 * implicitRules 0..0
 
 
-// switched to line up with NHI 
-//The gender has an extension for the original text that was used to establish it (eg from a form)
+// switched to line up with NZbase
 * gender.extension contains 
     $originalText named originalText 0..1
 

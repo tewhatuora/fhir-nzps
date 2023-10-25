@@ -1,5 +1,5 @@
 Profile: NZPSOrganization
-Parent: http://hl7.org.nz/fhir/StructureDefinition/NzOrganization
+Parent: http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips
 Id: NZPS-organization
 Title: "NZPS-Organization"
 Description: "The NZ Patient Summary organisation resource. This profile derives from the [International Patient summary](https://build.fhir.org/ig/HL7/fhir-ips/) with localisations using international and NZ standards including the [FHIR NZ Base IG](https://fhir.org.nz), for use in the NZ context."

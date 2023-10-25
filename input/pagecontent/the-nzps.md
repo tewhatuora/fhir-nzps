@@ -1,3 +1,5 @@
+### Initial scope
+
 NZPS is an extensible data set specification that will build on the set of data blocks presented here. New requirements can be
 expected to emerge from IPS’s own further development, as well as from local initiatives. The initial scope of the NZPS covers the content areas shown in the data blocks below. 
 
@@ -19,6 +21,8 @@ expected to emerge from IPS’s own further development, as well as from local i
 | Encounters                 | Core personal health information includes a record of the person’s recent encounters and interactions with health providers and the health system. This includes planned and unplanned encounters, in-person and online, at home or at a facility. Common types of encounter includes visits and online consultations with a GP, allied health professional or specialist.                                                                                                                                                                        |
 
 <br />
+
+### Future scope
 
 In the future, the initial scope will be expanded to include new sections with additional content. The content areas identified to add to this intial scope are shown in the following diagram. 
 
