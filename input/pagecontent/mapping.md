@@ -3,19 +3,19 @@ This page describes how the data in each data block is mapped to the NZPS FHIR p
 
 ### Data block to FHIR resource mapping
 
-**Demographics:**  [ [NZPS Patient](/StructureDefinition-nzps-patient.html) ] 
+**Demographics:**  [ [NZPS Patient](StructureDefinition-nzps-patient.html) ] 
 
-**Problems:**  [ [NZPS Condition](/StructureDefinition-nzps-condition.html) ] 
+**Problems:**  [ [NZPS Condition](StructureDefinition-nzps-condition.html) ] 
 
-**Medications:** [ [NZPS MedicationStatement](StructureDefinition-nzps-medicationstatement.html) | [NZPS MedicationRequest](StructureDefinition-nzps-medicationrequest.html) | [NZPS Medication](StructureDefinition-nzps-medication.html) ]
+**Medications:** [ [NZPS MedicationStatement](StructureDefinition-nzps-medicationstatement.html) \| [NZPS MedicationRequest](StructureDefinition-nzps-medicationrequest.html) \| [NZPS Medication](StructureDefinition-nzps-medication.html) ]
 
-**Allergies & Intolerances:** 
+**Allergies & Intolerances:** [ [NZPS AllergyIntolerance](StructureDefinition-nzps-allergyintolerance.html)  ]
 
-**Immunizations:**
+**Immunizations:** [ [NZPS Immunizations](StructureDefinition-nzps-immunization.html)  ]
 
-**Diagnostic results:**
+**Diagnostic results:**  [   ]
 
-**Smoking & Vaping:**
+**Smoking & Vaping:** [   ]
 
-**Measurements & vital signs**
+**Measurements & vital signs** [  ]
 
