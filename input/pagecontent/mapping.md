@@ -1,18 +1,21 @@
 
-Which FHIR resources are used to provide the information in the data blocks. 
+This page describes how the data in each data block is mapped to the NZPS FHIR profiles. In some cases there is a one to one mapping of content area to resource, in other cases multiple resources are required to represent the information in a data block. 
 
-Which data is also included in the bundle as referenced resources that support the data blocks (e.g. a Practitioner resource may be referenced from an observtion as the 'performer' - the individual who made the observation)
+### Data block to FHIR resource mapping
 
+**Demographics:**  [ [NZPS Patient](/StructureDefinition-nzps-patient.html) ] 
 
+**Problems:**  [ [NZPS Condition](/StructureDefinition-nzps-condition.html) ] 
 
-<!--
-test tables 
+**Medications:** [ [NZPS MedicationStatement](StructureDefinition-nzps-medicationstatement.html) | [NZPS MedicationRequest](StructureDefinition-nzps-medicationrequest.html) | [NZPS Medication](StructureDefinition-nzps-medication.html) ]
 
-table-profiles
+**Allergies & Intolerances:** 
 
-{% include table-profiles.xhtml %}
+**Immunizations:**
 
-list-profiles
+**Diagnostic results:**
 
-{% include list-profiles.xhtml %} 
--->
+**Smoking & Vaping:**
+
+**Measurements & vital signs**
+
