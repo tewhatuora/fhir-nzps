@@ -23,7 +23,7 @@ Alias: $nzps-organisation = https://standards.digital.health.nz/fhir/StructureDe
 Alias: $nzps-patient = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-patient
 Alias: $nzps-practitioner = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-practitioner
 Alias: $nzps-practitionerRole = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-practitionerrole
-
+Alias: $nzps-documentReference = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-documentreference
 // Extension  
 
 Alias: $originalText = http://hl7.org.nz/fhir/StructureDefinition/gender-original-text

@@ -16,10 +16,10 @@ This page describes how the data in each data block is mapped to the NZPS FHIR p
 | **Measurements & vital signs**    |  VitalSigns  |  [NZPS Vital Signs Observation](StructureDefinition-nzps-observation-vitalsigns.html)  |
 |  **Care plans**  |  PlanOfCare  | [NZPS CarePlan](StructureDefinition-nzps-care-plan.html)  |
 |  **Functional Status**   |  FunctionalStatus  | [NZPS Problem (Condition)](StructureDefinition-nzps-problem.html) \| [NZPS ClinicalImpression](StructureDefinition-nzps-clinical-impression.html)  |
-|  **Advance Directives**  |  AdvanceDirectives  |  NZPS DocumentReference \| NZPS Consent |
-|  **Pregnancy (status, history summary)**  | PregnancyHx   |   |
-|  **Recent encounters**  |  EncounterHx  |   |
-|  **Entitlements**  |  Entitlements  |   |
-|  **Patient story**  |  PatientStory  |   |
-| **Alerts**   |  Alerts  |   |
+|  **Advance Directives**  |  AdvanceDirectives  |  NZPS DocumentReference[](StructureDefinition-nzps-documentreference.html) \| NZPS Consent |
+|  **Pregnancy (status, history summary)**  | PregnancyHx   |  NZPS Pregnancy: EDD Observation \| NZPS Pregnancy: Outcome Observation \| NZPS Pregnancy: Status Observation \|
+|  **Recent encounters**  |  EncounterHx  | NZPS Encounter |
+|  **Entitlements**  |  Entitlements  | NZPS Coverage  |
+|  **Patient story**  |  PatientStory  | tbd |
+| **Alerts**   |  Alerts  |  NZPS Flag |
 
