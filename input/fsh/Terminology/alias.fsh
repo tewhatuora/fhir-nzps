@@ -21,6 +21,7 @@ Alias: $nzps-patient = https://standards.digital.health.nz/fhir/StructureDefinit
 Alias: $nzps-practitioner = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-practitioner
 Alias: $nzps-practitionerRole = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-practitionerrole
 
+
 // Extension  
 
 Alias: $originalText = http://hl7.org.nz/fhir/StructureDefinition/gender-original-text
@@ -29,3 +30,7 @@ Alias: $maori-descent = http://hl7.org.nz/fhir/StructureDefinition/maori-descent
 Alias: $nz-iwi = http://hl7.org.nz/fhir/StructureDefinition/nz-iwi
 Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
 Alias: $imposeProfile = http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile
+
+// terminology
+
+Alias: $loinc = http://loinc.org
