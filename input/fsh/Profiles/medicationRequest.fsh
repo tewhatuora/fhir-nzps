@@ -10,4 +10,4 @@ Description: "MedicationRequest as referenced by the MedicationStatement resourc
 * ^version = "0.1.0"
 * ^status = #active
 
-* ^url = "https://standards.digital.health.nz/fhir/StructureDefinition/nzps-medicationrequest"
+* ^url = $nzps-medicationRequest

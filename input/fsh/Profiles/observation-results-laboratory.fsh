@@ -5,6 +5,6 @@ Title: "NZPS-Observation-Results-Laboratory"
 Description: "This profile constrains the Observation resource to represent results produced by laboratory tests or panels/studies in a patient summary."
 * ^version = "0.1.0"
 * ^status = #active
-* ^url = "https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-results-laboratory"
+* ^url = $nzps-observation-results-laboratory
 
 

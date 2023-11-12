@@ -10,4 +10,4 @@ Description: "Medication as referenced by the MedicationStatement resource const
 * ^version = "0.1.0"
 * ^status = #active
 
-* ^url = "https://standards.digital.health.nz/fhir/StructureDefinition/nzps-medication"
+* ^url = $nzps-medication

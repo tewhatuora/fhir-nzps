@@ -22,13 +22,7 @@ This data enables the person to engage with the health system and receive health
 - Consumer access
 - Population health and public health */
 
-* ^url = "https://standards.digital.health.nz/fhir/StructureDefinition/nzps-patient"
-
-// suppress modifierExtension & contained
-* modifierExtension 0..0
-* contained 0..0
-* implicitRules 0..0
-
+* ^url = $nzps-patient
 
 // switched to line up with NZbase
 * gender.extension contains 

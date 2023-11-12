@@ -7,7 +7,7 @@ Description: "This profile constrains the Observation resource to represent Vapi
 * Change binding to snomed ct nz vaping status"
 * ^version = "0.1.0"
 * ^status = #active
-* ^url = "https://standards.digital.health.nz/fhir/StructureDefinition/nzps-vapingstatus"
+* ^url = $nzps-observation-vaping
 
 // needs binding to SNOMED CT NZ Vaping status reference set
 
