@@ -23,27 +23,3 @@ This page describes how the data in each data block is mapped to the NZPS FHIR p
 |  **Patient story**  |  PatientStory  |   |
 | **Alerts**   |  Alerts  |   |
 
-
-**Immunizations:**  [NZPS Immunizations](StructureDefinition-nzps-immunization.html)  
-
-**Diagnostic results:**   [NZPS DiagnosticResults](StructureDefinition-nzps-diagnostic-report.html)    
-
-**Smoking & Vaping:**  Social History   
-
-**Measurements & vital signs**   
-
-**Care plans** 
-
-**Functional Status**  
-
-**Advance Directives** 
-
-**Pregnancy (status & history summary)**  
-
-**Recent encounters**  
-
-**Entitlements** 
-
-**Patient story** 
-
-**Alerts** 
