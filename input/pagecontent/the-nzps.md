@@ -21,17 +21,3 @@ expected to emerge from IPS’s own further development, as well as from local i
 | Functional status          | An individual’s ability to perform normal daily activities required to meet basic needs, fulfil usual roles and maintain health and well-being |
 | Advance directives        |  Provision for healthcare decisions in the event that, in the future, a person is unable to make those decisions. Contains structured information related to the identity and address details of the decision maker and a description of all known patient's advance directives; this may reference a legal document. As there may be multiple directives it may be that the content is organized as a list. Furthermore, there may just be a reference to a document (sometimes known as a Living Will) rather than simple text. This reference may be an URL but is not restricted to just that form of reference.
 | Encounters                 | Core personal health information includes a record of the person’s recent encounters and interactions with health providers and the health system. This includes planned and unplanned encounters, in-person and online, at home or at a facility. Common types of encounter includes visits and online consultations with a GP, allied health professional or specialist.                                                                                                                                                                        |
-
-<br />
-
-### Future scope
-
-In the future, the initial scope will be expanded to include new sections with additional content. The content areas identified to add to this intial scope are shown in the following diagram. 
-
-<br />
-
-<br />
-
-{% include img.html img="future-scope.png" caption="Figure 2: The NZPS future scope" width="100%" %}
-
-<br />
