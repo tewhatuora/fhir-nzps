@@ -12,4 +12,4 @@ The remainder of the Bundle consists of FHIR resources that are either reference
 
 This overall structure of the bundle is shown in the diagram below. 
 
-{% include img.html img="document-bundle.png" caption="Figure 2: The FHIR Patient Summary Document bundle" width="100%" %}
+{% include img.html img="document-bundle.png" caption="Figure 2: The FHIR Patient Summary Document bundle" width="70%" %}
