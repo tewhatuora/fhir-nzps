@@ -2,13 +2,17 @@
 
 ## To do / clarify by content area
 
+### All profiles
+
+Add NZPS Referencess where appropriate. 
+
 ### functional status
 
-* include
+
 
 ### advance directive
 
-* include
+* include documentReference entry slice - entry:advanceDirectivesDocumentReference
 
 ### Demographics
 

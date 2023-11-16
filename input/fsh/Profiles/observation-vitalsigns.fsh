@@ -1,7 +1,7 @@
-Profile: NZPSVitalSigns
+Profile: NZPSObservationVitalSigns
 Parent: http://hl7.org/fhir/StructureDefinition/vitalsigns
-Id: nzps-vitalsigns
-Title: "NZPS-VitalSigns"
+Id: nzps-observation-vitalsigns
+Title: "NZPS-Observation-Vital-Signs"
 Description: "This profile is based on the R4 VitalSigns profile."
 
 * ^version = "0.1.0"

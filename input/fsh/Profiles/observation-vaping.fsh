@@ -1,7 +1,7 @@
-Profile: NZPSVapingStatus
+Profile: NZPSObservationVapingStatus
 Parent: http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips
-Id: nzps-vapingstatus
-Title: "NZPS-VapingStatus"
+Id: nzps-observation-vapingstatus
+Title: "NZPS-Observation-Vaping-Status"
 Description: "This profile constrains the Observation resource to represent Vaping use in a patient summary.
 
 * Change binding to snomed ct nz vaping status"

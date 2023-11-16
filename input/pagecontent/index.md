@@ -1,4 +1,3 @@
-<p style ="color:#ff0000; padding:10px; border-left:3px solid #ff0000;"> This draft is under active development and may change significantly.</p>
 
 ### FHIR NZ Patient Summary (NZPS)
 

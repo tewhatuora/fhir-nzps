@@ -1,0 +1,6 @@
+@import url(//fonts.googleapis.com/css?family=Poppins);
+
+body, p, li, td, tr, ul.dict li, table.dict td, table.dict td.structure, table.codes td, table.grid th, table.grid td, h1, h2, h3, h4, .heirarchy, tr.heirarchy, table.lmap th, table.lmap td 
+{
+    font-family: "Poppins", sans-serif !important;
+}

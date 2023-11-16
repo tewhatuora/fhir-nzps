@@ -4,19 +4,19 @@ This page describes how the data in each data block is mapped to the NZPS FHIR p
 ### Data block to FHIR resource mapping
 
 
-| **NZPS Data block**  |  **NZPS Composition section**  |  **FHIR profiles used**  |
-| ----------  |  -------------------- |    -----------  |
-| **Demographcs** |  Composition's subject  |   [NZPS Patient](StructureDefinition-nzps-patient.html)   |
-|  **Problems:**  |  Problems    | [NZPS Condition](StructureDefinition-nzps-condition.html)      |
+| **Data block**  |  **Composition section**  |  **FHIR profiles used**  |
+| ----------  |  --------------------: |    -----------  |
+| **Demographcs** |  Composition's subject                |   [NZPS Patient](StructureDefinition-nzps-patient.html)   |
+|  **Problems:**  |  Problems    | [NZPS Problem (Condition)](StructureDefinition-nzps-condition.html)      |
 | **Medications** | Medications |   [NZPS MedicationStatement](StructureDefinition-nzps-medicationstatement.html) \| [NZPS MedicationRequest](StructureDefinition-nzps-medicationrequest.html) \| [NZPS Medication](StructureDefinition-nzps-medication.html)  |
 | **Allergies & Intolerances** | Allergies  |   [NZPS AllergyIntolerance](StructureDefinition-nzps-allergyintolerance.html)  |
 | **Immunizations**  | Immunizations   |  [NZPS Immunizations](StructureDefinition-nzps-immunization.html) |
 |  **Diagnostic results**  |  Results  |  [NZPS DiagnosticResults](StructureDefinition-nzps-diagnostic-report.html) |
-|  **Social History (Smoking & Vaping)** |  Social History   |   |
-| **Measurements & vital signs**    |  VitalSigns  |   |
-|  **Care plans**  |  PlanOfCare  |   |
-|  **Functional Status**   |  FunctionalStatus  |   |
-|  **Advance Directives**  |  AdvanceDirectives  |   |
+|  **Social History (Smoking & Vaping)** |  Social History   | [NZPS Smoking Status Observation](StructureDefinition-nzps-observation-smokingstatus.html) \| [NZPS Vaping Status Observation](StructureDefinition-nzps-observation-vapingstatus.html)  |
+| **Measurements & vital signs**    |  VitalSigns  |  [NZPS Vital Signs Observation](StructureDefinition-nzps-observation-vitalsigns.html)  |
+|  **Care plans**  |  PlanOfCare  | [NZPS CarePlan](StructureDefinition-nzps-care-plan.html)  |
+|  **Functional Status**   |  FunctionalStatus  | [NZPS Problem (Condition)](StructureDefinition-nzps-problem.html) \| [NZPS ClinicalImpression](StructureDefinition-nzps-clinical-impression.html)  |
+|  **Advance Directives**  |  AdvanceDirectives  |  NZPS DocumentReference | NZPS Consent
 |  **Pregnancy (status & history summary)**  | PregnancyHx   |   |
 |  **Recent encounters**  |  RecentEncounters  |   |
 |  **Entitlements**  |  Entitlements  |   |
