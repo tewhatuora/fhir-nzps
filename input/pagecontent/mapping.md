@@ -4,8 +4,8 @@ This page describes how the data in each data block is mapped to the NZPS FHIR p
 ### Data block to FHIR resource mapping
 
 
-| **Data block**  |  **Composition section**  |  **FHIR profiles used**  |
-| ----------  |  --------------------: |    -----------  |
+| **NZPS Content area**  |  **Composition section**  |  **FHIR profiles used**  |
+| ----------  |  -------------------- |    -----------  |
 | **Demographcs** |  Composition's subject                |   [NZPS Patient](StructureDefinition-nzps-patient.html)   |
 |  **Problems:**  |  Problems    | [NZPS Problem (Condition)](StructureDefinition-nzps-condition.html)      |
 | **Medications** | Medications |   [NZPS MedicationStatement](StructureDefinition-nzps-medicationstatement.html) \| [NZPS MedicationRequest](StructureDefinition-nzps-medicationrequest.html) \| [NZPS Medication](StructureDefinition-nzps-medication.html)  |
