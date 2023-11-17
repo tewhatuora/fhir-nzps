@@ -1,5 +1,5 @@
 
-### FHIR NZ Patient Summary (NZPS)
+### NZ Patient Summary (NZPS)
 
 This FHIR implementation guide (IG) defines the draft FHIR translation of the [HISO 10099:2022 NZ International Patient Summary (NZIPS) standard](https://consult.health.govt.nz/hiso/hiso-10099-2022-nzips/supporting_documents/hiso10099nzipsdraft20220509.pdf) published for consultation in May & July 2022. 
 

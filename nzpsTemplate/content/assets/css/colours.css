@@ -13,7 +13,7 @@
   /*  --btn-gradient-end-color-alpha: #fa8072; /* 12. Menu item gradient end color (with alpha) */
      --link-color: #03578f; /* 13. Hyperlink text color */
  --link-hover-color: #15284c; /* 14. Hyperlink text hover color */
-      --publish-box-bg-color: #48dadf; /* 15. Publish box background color */
+      --publish-box-bg-color: #48dadf36; /* 15. Publish box background color */
    --publish-box-border: 1px solid #15284c; /* Publish box border definition */
   --toc-box-bg-color: #F6F4EC; /* 17.  TOC box background color */
   --toc-box-border: 1px solid #15284c; /* 18. TOC box border definition */
@@ -29,4 +29,8 @@
     --breadcrumb-text-color: #15284c; /* 28. Breadcrumb font color */
   /* 29.  --dragon-background-color: #ebe7ee; /* 29. Dragon background color */
   /* 29.  --dragon-font-color: #400070; /* 30. Dragon font color */
+}
+
+table.colsd td, table.colsi td {
+  background-color: #F6F4EC;
 }
