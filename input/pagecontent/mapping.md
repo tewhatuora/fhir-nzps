@@ -12,13 +12,13 @@ This page describes how the data in each data block is mapped to the NZPS FHIR p
 | **Allergies & Intolerances** | Allergies  |   [NZPS AllergyIntolerance](StructureDefinition-nzps-allergyintolerance.html)  |
 | **Immunizations**  | Immunizations   |  [NZPS Immunizations](StructureDefinition-nzps-immunization.html) |
 |  **Diagnostic results**  |  Results  |  [NZPS DiagnosticResults](StructureDefinition-nzps-diagnostic-report.html) |
-|  **Social History (Smoking & Vaping)** |  Social History   | [NZPS Smoking Status Observation](StructureDefinition-nzps-observation-smokingstatus.html) \| [NZPS Vaping Status Observation](StructureDefinition-nzps-observation-vapingstatus.html)  |
+|  **Social History (smoking, vaping, alcohol)** |  Social History   | [NZPS Smoking Status Observation](StructureDefinition-nzps-observation-smokingstatus.html) \| [NZPS Vaping Status Observation](StructureDefinition-nzps-observation-vapingstatus.html)  |
 | **Measurements & vital signs**    |  VitalSigns  |  [NZPS Vital Signs Observation](StructureDefinition-nzps-observation-vitalsigns.html)  |
 |  **Care plans**  |  PlanOfCare  | [NZPS CarePlan](StructureDefinition-nzps-care-plan.html)  |
 |  **Functional Status**   |  FunctionalStatus  | [NZPS Problem (Condition)](StructureDefinition-nzps-problem.html) \| [NZPS ClinicalImpression](StructureDefinition-nzps-clinical-impression.html)  |
-|  **Advance Directives**  |  AdvanceDirectives  |  NZPS DocumentReference | NZPS Consent
-|  **Pregnancy (status & history summary)**  | PregnancyHx   |   |
-|  **Recent encounters**  |  RecentEncounters  |   |
+|  **Advance Directives**  |  AdvanceDirectives  |  NZPS DocumentReference \| NZPS Consent |
+|  **Pregnancy (status, history summary)**  | PregnancyHx   |   |
+|  **Recent encounters**  |  EncounterHx  |   |
 |  **Entitlements**  |  Entitlements  |   |
 |  **Patient story**  |  PatientStory  |   |
 | **Alerts**   |  Alerts  |   |
