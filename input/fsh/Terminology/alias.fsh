@@ -6,14 +6,18 @@ Alias: $nzps-carePlan = https://standards.digital.health.nz/fhir/StructureDefini
 Alias: $nzps-clinicalImpression = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-clinicalimpression
 Alias: $nzps-composition = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-composition
 Alias: $nzps-condition = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-condition
+Alias: $nzps-coverage = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-coverage
 Alias: $nzps-diagnosticReport = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-diagnosticreport
+Alias: $nzps-documentReference = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-documentreference
 Alias: $nzps-encounter = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-encounter
+Alias: $nzps-flag = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-flag
 Alias: $nzps-immunization = https://standards.digital.health.nz/fhir/StructureDefinition/nzips-immunization
 Alias: $nzps-medication = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-medication
 Alias: $nzps-medicationRequest = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-medicationrequest
 Alias: $nzps-medicationStatement = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-medicationstatement
 Alias: $nzps-observation-pregnancy-edd = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-pregnancy-edd
-
+Alias: $nzps-observation-pregnancy-status = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-pregnancy-status
+Alias: $nzps-observation-pregnancy-outcome = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-pregnancy-outcome
 Alias: $nzps-observation-results-laboratory = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-results-laboratory
 Alias: $nzps-observation-results = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-results
 Alias: $nzps-observation-smoking = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-smoking-status
@@ -23,7 +27,8 @@ Alias: $nzps-organisation = https://standards.digital.health.nz/fhir/StructureDe
 Alias: $nzps-patient = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-patient
 Alias: $nzps-practitioner = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-practitioner
 Alias: $nzps-practitionerRole = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-practitionerrole
-Alias: $nzps-documentReference = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-documentreference
+
+
 // Extension  
 
 Alias: $originalText = http://hl7.org.nz/fhir/StructureDefinition/gender-original-text
