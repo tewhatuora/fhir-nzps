@@ -17,8 +17,8 @@
    --publish-box-border: 1px solid #15284c; /* Publish box border definition */
   --toc-box-bg-color: #F6F4EC; /* 17.  TOC box background color */
   --toc-box-border: 1px solid #15284c; /* 18. TOC box border definition */
-  /* 19.  --stu-note-background-color: #8b4513; /* 19. (STU) Note box background color */
-  /* 20.  --stu-note-border-left-color: #ffa0ff; /* 20. (STU) Note box border color */
+  --stu-note-background-color: #48dadf36; /* 19. (STU) Note box background color */
+  --stu-note-border-left-color: #30a1ac; /* 20. (STU) Note box border color */
   /* 21.  --ig-header-color: #fff2ff; /* 21. Header color (sides) */
  /* 22.   --ig-header-container-color: #4b0082; /* 22. Header container color (center) */
  /* 23.    --footer-nav-bg-color: #f5f5f5; /* 23. Footer navigation background color*/
