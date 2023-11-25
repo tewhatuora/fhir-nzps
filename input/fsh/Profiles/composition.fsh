@@ -84,7 +84,7 @@ Description: "Clinical document used to represent the NZPS data set. It is an el
 * section[sectionSocialHistory].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionSocialHistory].entry ^slicing.rules = #open
 * section[sectionSocialHistory].entry[smokingTobaccoUse] only Reference($nzps-observation-smoking)
-//* section[sectionSocialHistory].entry[alcoholUse] only Reference($Observation-alcoholuse-au-ips)
+* section[sectionSocialHistory].entry[alcoholUse] only Reference($nzps-observation-alcohol)
 
 /*
 * section[sectionPregnancyHx].code = $loinc#10162-6

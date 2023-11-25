@@ -22,12 +22,16 @@ Alias: $nzps-observation-results-laboratory = https://standards.digital.health.n
 Alias: $nzps-observation-results = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-results
 Alias: $nzps-observation-smoking = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-smoking-status
 Alias: $nzps-observation-vaping = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-vaping-status
+Alias: $nzps-observation-alcohol = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-alcohol-use
 Alias: $nzps-observation-vitalsigns = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-vital-signs
 Alias: $nzps-organisation = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-organization
 Alias: $nzps-patient = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-patient
 Alias: $nzps-practitioner = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-practitioner
 Alias: $nzps-practitionerRole = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-practitionerrole
 
+
+Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 
 // Extension  
 
@@ -38,6 +42,11 @@ Alias: $nz-iwi = http://hl7.org.nz/fhir/StructureDefinition/nz-iwi
 Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
 Alias: $imposeProfile = http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile
 
-// terminology
-
+// codesystem URLs
 Alias: $loinc = http://loinc.org
+Alias: $nz-loinc = https://standards.digital.health.nz/ns/loinc-nz-local-code
+
+// valueset url
+
+// should we be using an implicit valueset? http://snomed.info/sct?fhir_vs=refset/72721000210100 
+Alias: $nzps-current-vaping-status = http://snomed.info/sct?fhir_vs=refset/72721000210100 
