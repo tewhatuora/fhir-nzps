@@ -1,8 +1,0 @@
-ValueSet : VapingStatus
-Id: vaping-status-vs
-Title: "Vaping Status"
-Description:  "ValueSet for Vaping Status based on the New Zealand vaping status reference set."
-
-* ^url = $nzps-current-vaping-status
-* ^version = "1.0.0"
-

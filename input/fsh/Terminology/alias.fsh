@@ -33,6 +33,10 @@ Alias: $nzps-practitionerRole = https://standards.digital.health.nz/fhir/Structu
 Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 
+
+Alias: $shareablevalueset = http://hl7.org/fhir/StructureDefinition/shareablevalueset
+
+
 // Extension  
 
 Alias: $originalText = http://hl7.org.nz/fhir/StructureDefinition/gender-original-text
@@ -48,5 +52,7 @@ Alias: $nz-loinc = https://standards.digital.health.nz/ns/loinc-nz-local-code
 
 // valueset url
 
+
+
 // should we be using an implicit valueset? http://snomed.info/sct?fhir_vs=refset/72721000210100 
-Alias: $nzps-current-vaping-status = http://snomed.info/sct?fhir_vs=refset/72721000210100 
+Alias: $nzps-current-vaping-status-vs = https://nzhts.digital.health.nz/fhir/ValueSet/vaping-status

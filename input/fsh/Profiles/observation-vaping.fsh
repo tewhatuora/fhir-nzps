@@ -21,6 +21,6 @@ Description: "This profile constrains the Observation resource to represent Vapi
 * effective[x].extension[data-absent-reason] ^short = "effective[x] absence reason"
 * effective[x].extension[data-absent-reason] ^definition = "Provides a reason why the effectiveTime is missing."
 * valueCodeableConcept only $CodeableConcept-uv-ips
-* valueCodeableConcept from $nzps-current-vaping-status (required)
+* valueCodeableConcept from $nzps-current-vaping-status-vs (required)
 * component ..0
 * component ^mustSupport = false
