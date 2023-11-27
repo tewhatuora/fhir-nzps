@@ -15,9 +15,9 @@ Usage: #example
 * recipient = Reference(Practitioner/example)
 * sender = Reference(Patient/example)
 
-* payload[+].contentString = "I've started to go out less since my bad fall."
-* payload[+].contentString = "My daughter takes care of me"
-* payload[+].contentString = "My church is important to me"
-* payload[+].contentString = "I want everyone to know that I'm embarrased to get healthcare sometimes."
+* payload[+].contentString = "I need help monitoring my diabetes (current)/my diabetes is remotely monitored and I can talk with people facing similar issues"
+* payload[+].contentString = "With my family, we have decided that I need to enter residential care. The facility will need to cater for extended family and group visits"
+* payload[+].contentString = "I have a Medic Alert bracelet in case of any potential health events or if I get lost"
+* payload[+].contentString = "Members of my aiga attend all of my appointments"
 * payload[+].contentReference = Reference(RelatedPerson/churchminister)
 * payload[+].contentReference = Reference(RelatedPerson/cindy)
