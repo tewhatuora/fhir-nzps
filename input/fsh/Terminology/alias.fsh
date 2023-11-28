@@ -4,6 +4,7 @@ Alias: $nzps-allergyIntolerance = https://standards.digital.health.nz/fhir/Struc
 Alias: $nzps-bundle = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-bundle
 Alias: $nzps-carePlan = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-careplan
 Alias: $nzps-clinicalImpression = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-clinicalimpression
+Alias: $nzps-communication = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-communication
 Alias: $nzps-composition = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-composition
 Alias: $nzps-condition = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-condition
 Alias: $nzps-coverage = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-coverage
