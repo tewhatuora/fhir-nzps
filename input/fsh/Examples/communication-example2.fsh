@@ -18,4 +18,4 @@ Usage: #example
 * sender = Reference(Patient/example)
 
 * payload[+].contentReference = Reference(RelatedPerson/cindy)
-* note = "Cindy is Ioese's fa'afafine son who was a social worker now cares fulltime. They help Ioese with his diabetes test kit."
+* note[+].text = "Cindy is Ioese's fa'afafine son who was a social worker now cares fulltime. They help Ioese with his diabetes test kit."
