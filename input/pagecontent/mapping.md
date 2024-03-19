@@ -20,6 +20,6 @@ This page describes how the data in each data block is mapped to the NZPS FHIR p
 |  **Pregnancy (status, history summary)**  | PregnancyHx   |  [NZPS Pregnancy: EDD Observation](StructureDefinition-nzps-observation-pregnancy-edd.html) \| [NZPS Pregnancy: Outcome Observation](StructureDefinition-nzps-observation-pregnancy-outcome.html) \| [NZPS Pregnancy: Status Observation](StructureDefinition-nzps-observation-pregnancy-status.html) \|
 |  **Recent encounters**  |  EncounterHx  | [NZPS Encounter](StructureDefinition-nzps-encounter.html) |
 |  **Entitlements**  |  Entitlements  | [NZPS Coverage](StructureDefinition-nzps-coverage.html) |
-|  **Patient story**  |  PatientStory  | tbd |
+|  **Patient story**  |  PatientStory  | [NZPS Communication](StructureDefinition-nzps-communication.html) |
 | **Alerts**   |  Alerts  |  [NZPS Flag](StructureDefinition-nzps-flag.html) |
 
