@@ -15,6 +15,7 @@ Alias: $nzps-flag = https://standards.digital.health.nz/fhir/StructureDefinition
 Alias: $nzps-immunization = https://standards.digital.health.nz/fhir/StructureDefinition/nzips-immunization
 Alias: $nzps-medication = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-medication
 Alias: $nzps-medicationRequest = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-medicationrequest
+Alias: $nzps-medicationDispense = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-medicationdispense
 Alias: $nzps-medicationStatement = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-medicationstatement
 Alias: $nzps-observation-pregnancy-edd = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-pregnancy-edd
 Alias: $nzps-observation-pregnancy-status = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-pregnancy-status
