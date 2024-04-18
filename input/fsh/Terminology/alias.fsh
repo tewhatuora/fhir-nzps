@@ -50,6 +50,7 @@ Alias: $imposeProfile = http://hl7.org/fhir/StructureDefinition/structuredefinit
 // codesystem URLs
 Alias: $loinc = http://loinc.org
 Alias: $nz-loinc = https://standards.digital.health.nz/ns/loinc-nz-local-code
+Alias: $act-class = http://terminology.hl7.org/CodeSystem/v3-ActClass
 
 // valueset url
 
