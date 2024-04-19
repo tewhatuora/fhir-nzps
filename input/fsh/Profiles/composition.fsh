@@ -24,7 +24,7 @@ Description: "Clinical document used to represent the NZPS data set. It is an el
 * section[sectionMedications].entry[medicationStatement] only Reference($nzps-medicationStatement)
 * section[sectionMedications].entry[medicationRequest] only Reference($nzps-medicationRequest)
 * section[sectionMedications].entry contains medicationDispense 0..*
-* section[sectionMedications].entry[medicationDispense] only Reference(MedicationDispense)
+* section[sectionMedications].entry[medicationDispense] only Reference($nzps-medicationDispense)
 
 * section[sectionAllergies].code = $loinc#48765-2
 * section[sectionAllergies].entry ^slicing.discriminator[0].type = #profile
