@@ -59,3 +59,6 @@ Alias: $act-class = http://terminology.hl7.org/CodeSystem/v3-ActClass
 
 // should we be using an implicit valueset? http://snomed.info/sct?fhir_vs=refset/72721000210100 
 Alias: $nzps-current-vaping-status-vs = https://nzhts.digital.health.nz/fhir/ValueSet/vaping-status
+
+// summary operation
+Alias: $nzps-summary-operation = https://standards.digital.health.nz/fhir/OperationDefinition/nzps-summary

@@ -1,0 +1,67 @@
+Instance: NZPS-minimal-bundle-example
+InstanceOf: NZPSBundle
+Title: "NZPS minimal bundle example"
+Usage: #example
+
+* type = #document
+* meta.profile = "https://standards.digital.health.nz/fhir/StructureDefinition/nzps-bundle"
+* meta.lastUpdated = "2024-05-01T00:00:00Z"
+* meta.versionId = "1"
+* identifier.system = "urn:oid:2.16.724.4.8.10.200.10"
+* identifier.value = "d9f51f00-2005-485c-858e-3d3ae9653458"
+* timestamp = "2024-05-05T08:13:47.2028681+00:00"
+
+// bundle entries
+
+// composition
+* entry[0].fullUrl = "https://baseurl.nz/fhir/Composition/9b9e4f64-c976-47e9-a8a5-4b9b0484a776"
+* entry[=].resource = 9b9e4f64-c976-47e9-a8a5-4b9b0484a776
+
+// patient
+* entry[+].fullUrl = "https://baseurl.nz/fhir/Patient/9bbe4f64-c976-47e9-a8a5-4b9b0484a711"
+* entry[=].resource = 9bbe4f64-c976-47e9-a8a5-4b9b0484a711
+
+
+Instance: 9b9e4f64-c976-47e9-a8a5-4b9b0484a776
+InstanceOf: NZPSComposition
+Usage: #inline
+* meta.versionId = "1"
+* meta.profile = "https://standards.digital.health.nz/fhir/StructureDefinition/nzps-composition"
+* type = $loinc#60591-5 "Patient summary Document"
+
+// extensions
+* extension[0].url = "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber"
+* extension[=].valueString = "1"
+
+* status = #final
+* subject = Reference(9bbe4f64-c976-47e9-a8a5-4b9b0484a711)
+* date = "2024-05-01T00:00:00Z"
+* title = "New Zealand Patient Summary"
+* confidentiality = #N
+
+* author[0].display = "Health NZ Patient Summary Service"
+* author[=].type = #Device
+* author[+].type = #Organization
+* author[=].display = "Health New Zealand - Te Whatu Ora"
+* author[=].reference = "Organization/G0K357-H"
+
+* subject = Reference(ZKT9319)
+* date = "2023-11-21"
+* author = Reference(9c9542df-e45f-4131-9d44-8f5974e56d5b)
+* title = "International Patient Summary"
+* confidentiality = #N
+* attester.mode = #professional
+* attester.time = "2023-11-21"
+* attester.party = Reference(c9288aea-5e73-4182-8231-aacbe50d3244)
+* custodian = Reference(644f2fb9-c264-4c32-898b-4048dddd6d1b)
+* relatesTo.code = #transforms
+* relatesTo.targetIdentifier.system = "urn:oid:2.16.840.1.113883.2.18.7.2"
+* relatesTo.targetIdentifier.value = "3d5006e9-f003-4a78-a253-40ab405b7ef2"
+* event.code = $act-class#PCPR
+* event.period.end = "2023-11-21"
+* section[0].title = "Allergies and Intolerances"
+* section[=].code = $loinc#48765-2 "Allergies and adverse reactions Document"
+* section[=].text.status = #generated
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <table>\r\n    <thead>\r\n      <tr>\r\n        <th>Code</th>\r\n        <th>Type</th>\r\n        <th>Recorded On</th>\r\n        <th>Asserted By</th>\r\n        <th>Clinical Status</th>\r\n        <th>Verification Status</th>\r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n      <tr>\r\n        <td>Flucloxacillin-containing product</td>\r\n        <td>Allergy</td>\r\n        <td />\r\n        <td>Patient/ZKT9319</td>\r\n        <td>active</td>\r\n        <td>confirmed</td>\r\n      </tr>\r\n      <tr>\r\n        <td>Diazepam-containing product</td>\r\n        <td>Allergy</td>\r\n        <td />\r\n        <td>Patient/ZKT9319</td>\r\n        <td>active</td>\r\n        <td>confirmed</td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n</div>"
+* section[=].entry[0] = Reference(1dfacb6d-4260-4fd4-84e9-a1c13aafa72c)
+* section[=].entry[+] = Reference(e9b9aeaf-e5ac-4f72-b01d-df4c6107f746)
