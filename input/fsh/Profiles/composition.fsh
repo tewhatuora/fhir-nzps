@@ -9,8 +9,9 @@ Description: "Clinical document used to represent the NZPS data set. It is an el
 
 * subject only Reference($nzps-patient)
 
-* section contains sectionEncounter 0..1
+* section.emptyReason from $nzps-list-empty-reason-vs
 
+* section contains sectionEncounter 0..1
 
 * section ^slicing.discriminator[0].type = #pattern
 * section ^slicing.discriminator[=].path = "code"
