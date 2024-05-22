@@ -9,7 +9,7 @@ name: nzps
 title: FHIR New Zealand Patient Summary IG
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
-version: 0.2.0
+version: 0.3.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -58,6 +58,7 @@ pages:
     title: NZPS data blocks to FHIR resource mapping
   artifacts.html:
     title: NZPS Library
+
     
 #   index.md:
 #     title: Example Home
@@ -94,7 +95,8 @@ menu:
   NZPS Content: the-nzps.html
   NZPS Structure: document-structure.html
   NZPS Mapping to FHIR: mapping.html
-  NZPS Library: artifacts.html
+  NZPS Library: artifacts.html#structures-resource-profiles
+  HealthNZ NZPS API: OperationDefinition-NZPSSummaryOperation.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
