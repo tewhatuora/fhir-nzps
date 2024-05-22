@@ -52,10 +52,13 @@ Alias: $imposeProfile = http://hl7.org/fhir/StructureDefinition/structuredefinit
 Alias: $loinc = http://loinc.org
 Alias: $nz-loinc = https://standards.digital.health.nz/ns/loinc-nz-local-code
 Alias: $act-class = http://terminology.hl7.org/CodeSystem/v3-ActClass
+Alias: $hl7-list-empty-reason = http://terminology.hl7.org/CodeSystem/list-empty-reason
+Alias: $nzps-list-empty-reason = https://standards.digital.health.nz/ns/nzps-list-empty-reason
 
 // valueset url
 
-
+Alias: $nzps-list-empty-reason-vs = https://nzhts.digital.health.nz/fhir/ValueSet/nzps-list-empty-reason
+Alias: $hl7-list-empty-vs = http://hl7.org/fhir/ValueSet/list-empty-reason
 
 // should we be using an implicit valueset? http://snomed.info/sct?fhir_vs=refset/72721000210100 
 Alias: $nzps-current-vaping-status-vs = https://nzhts.digital.health.nz/fhir/ValueSet/vaping-status
