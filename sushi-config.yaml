@@ -7,7 +7,7 @@ id: tewhatuora.fhir.nzps
 canonical: https://standards.digital.health.nz
 name: nzps
 title: FHIR New Zealand Patient Summary IG
-# description: Example Implementation Guide for getting started with SUSHI
+description: Implementation guide for the New Zealand Patient Summary 
 status: draft # draft | active | retired | unknown
 version: 0.3.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
