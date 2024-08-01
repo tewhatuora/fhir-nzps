@@ -22,7 +22,6 @@ This data enables the person to engage with the health system and receive health
 - Consumer access
 - Population health and public health */
 
-* ^url = $nzps-patient
 
 // switched to line up with NZbase
 * gender.extension contains 

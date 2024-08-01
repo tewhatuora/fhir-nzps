@@ -1,35 +1,36 @@
 // Profiles
 
-Alias: $nzps-allergyIntolerance = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-allergyintolerance
-Alias: $nzps-bundle = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-bundle
-Alias: $nzps-carePlan = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-careplan
-Alias: $nzps-clinicalImpression = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-clinicalimpression
-Alias: $nzps-communication = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-communication
-Alias: $nzps-composition = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-composition
-Alias: $nzps-condition = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-condition
-Alias: $nzps-coverage = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-coverage
-Alias: $nzps-diagnosticReport = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-diagnosticreport
-Alias: $nzps-documentReference = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-documentreference
-Alias: $nzps-encounter = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-encounter
-Alias: $nzps-flag = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-flag
-Alias: $nzps-immunization = https://standards.digital.health.nz/fhir/StructureDefinition/nzips-immunization
-Alias: $nzps-medication = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-medication
-Alias: $nzps-medicationRequest = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-medicationrequest
-Alias: $nzps-medicationDispense = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-medicationdispense
-Alias: $nzps-medicationStatement = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-medicationstatement
-Alias: $nzps-observation-pregnancy-edd = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-pregnancy-edd
-Alias: $nzps-observation-pregnancy-status = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-pregnancy-status
-Alias: $nzps-observation-pregnancy-outcome = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-pregnancy-outcome
-Alias: $nzps-observation-results-laboratory = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-results-laboratory
-Alias: $nzps-observation-results = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-results
-Alias: $nzps-observation-smoking = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-smoking-status
-Alias: $nzps-observation-vaping = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-vaping-status
-Alias: $nzps-observation-alcohol = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-alcohol-use
-Alias: $nzps-observation-vitalsigns = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-observation-vital-signs
-Alias: $nzps-organisation = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-organization
-Alias: $nzps-patient = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-patient
-Alias: $nzps-practitioner = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-practitioner
-Alias: $nzps-practitionerRole = https://standards.digital.health.nz/fhir/StructureDefinition/nzps-practitionerrole
+
+Alias: $nzps-allergyIntolerance = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/allergyintolerance
+Alias: $nzps-bundle = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/bundle
+Alias: $nzps-carePlan = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/careplan
+Alias: $nzps-clinicalImpression = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/clinicalimpression
+Alias: $nzps-communication = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/communication
+Alias: $nzps-composition = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/composition
+Alias: $nzps-condition = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/condition
+Alias: $nzps-coverage = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/coverage
+Alias: $nzps-diagnosticReport = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/diagnosticreport
+Alias: $nzps-documentReference = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/documentreference
+Alias: $nzps-encounter = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/encounter
+Alias: $nzps-flag = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/flag
+Alias: $nzps-immunization = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/immunization
+Alias: $nzps-medication = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/medication
+Alias: $nzps-medicationRequest = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/medicationrequest
+Alias: $nzps-medicationDispense = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/medicationdispense
+Alias: $nzps-medicationStatement = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/medicationstatement
+Alias: $nzps-observation-pregnancy-edd = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/observation-pregnancy-edd
+Alias: $nzps-observation-pregnancy-status = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/observation-pregnancy-status
+Alias: $nzps-observation-pregnancy-outcome = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/observation-pregnancy-outcome
+Alias: $nzps-observation-results-laboratory = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/observation-results-laboratory
+Alias: $nzps-observation-results = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/observation-results
+Alias: $nzps-observation-smoking = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/observation-smoking-status
+Alias: $nzps-observation-vaping = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/observation-vaping-status
+Alias: $nzps-observation-alcohol = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/observation-alcohol-use
+Alias: $nzps-observation-vitalsigns = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/observation-vital-signs
+Alias: $nzps-organisation = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/organization
+Alias: $nzps-patient = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/patient
+Alias: $nzps-practitioner = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/practitioner
+Alias: $nzps-practitionerRole = https://fhir-ig.digital.health.nz/nzps/StructureDefinition/practitionerrole
 
 
 Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
@@ -64,4 +65,4 @@ Alias: $hl7-list-empty-vs = http://hl7.org/fhir/ValueSet/list-empty-reason
 Alias: $nzps-current-vaping-status-vs = https://nzhts.digital.health.nz/fhir/ValueSet/vaping-status
 
 // summary operation
-Alias: $nzps-summary-operation = https://standards.digital.health.nz/fhir/OperationDefinition/nzps-summary
+Alias: $nzps-summary-operation = https://fhir-ig.digital.health.nz/nzps/OperationDefinition/summary

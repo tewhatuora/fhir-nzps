@@ -5,7 +5,7 @@ Title: "NZPS-Bundle"
 Description: "This profile represents the constraints applied to the Bundle resource for the New Zealand Patient summary and is based on the profile for the International Patient Summary (IPS) Document Bundle."
 * ^version = "0.1.0"
 * ^status = #active
-* ^url = $nzps-bundle
+// * ^url = $nzps-bundle
 
 * entry contains 
     careplan 0..* and

@@ -12,7 +12,6 @@ Description: "A record of medication being taken is represented in the patient s
 * ^version = "0.1.0"
 * ^status = #active
 
-* ^url = $nzps-medicationStatement
 
 * medicationCodeableConcept.coding ^slicing.discriminator.type = #value
 * medicationCodeableConcept.coding ^slicing.discriminator.path = "system"

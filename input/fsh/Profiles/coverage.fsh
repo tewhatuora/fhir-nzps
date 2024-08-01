@@ -5,4 +5,4 @@ Title: "NZPS-Coverage"
 Description: "The coverage resource is used to record NZ health system entitlement information"
 * ^version = "0.1.0"
 * ^status = #active
-* ^url = $nzps-coverage
+

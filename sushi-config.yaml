@@ -4,14 +4,14 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: tewhatuora.fhir.nzps
-canonical: https://standards.digital.health.nz
+canonical: https://fhir-ig.digital.health.nz/nzps
 name: nzps
 title: FHIR New Zealand Patient Summary IG
 description: Implementation guide for the New Zealand Patient Summary 
 status: draft # draft | active | retired | unknown
-version: 0.3.0
+version: 0.5.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-copyrightYear: 2023+
+copyrightYear: 2024+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: urn:iso:std:iso:3166#NZ "New Zealand" # https://www.hl7.org/fhir/valueset-jurisdiction.html
@@ -23,13 +23,6 @@ publisher:
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for id, uri, and version.
-#
-# dependencies:
-#   hl7.fhir.us.core: 3.1.0
-#   hl7.fhir.us.mcode:
-#     id: mcode
-#     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
-#     version: 1.0.0
 
 dependencies:
   hl7.fhir.uv.ips: 1.1.0

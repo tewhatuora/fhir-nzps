@@ -10,8 +10,6 @@ Description: "Medication dispensing information using NZMT codes for medication 
 * ^version = "0.1.0"
 * ^status = #active
 
-* ^url = $nzps-medicationDispense
-
 * medicationCodeableConcept.coding ^slicing.discriminator.type = #value
 * medicationCodeableConcept.coding ^slicing.discriminator.path = "system"
 * medicationCodeableConcept.coding ^slicing.rules = #open
