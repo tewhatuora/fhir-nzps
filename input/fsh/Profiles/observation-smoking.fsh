@@ -5,7 +5,7 @@ Title: "NZPS-Observation-Smoking-Status"
 Description: "This profile constrains the Observation resource to represent Tobacco use assessment in a patient summary."
 * ^version = "0.1.0"
 * ^status = #active
-* ^url = $nzps-observation-smoking
+
 
 
 

@@ -9,5 +9,3 @@ Description: "MedicationRequest as referenced by the MedicationStatement resourc
 
 * ^version = "0.1.0"
 * ^status = #active
-
-* ^url = $nzps-medicationRequest

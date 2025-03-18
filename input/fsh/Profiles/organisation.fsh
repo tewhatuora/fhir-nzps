@@ -7,4 +7,3 @@ Description: "The NZ Patient Summary organisation resource. This profile derives
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
 * ^extension[=].valueCanonical = "http://hl7.org.nz/fhir/StructureDefinition/NzOrganization"
 
-* ^url = $nzps-organisation

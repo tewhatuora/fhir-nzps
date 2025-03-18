@@ -5,7 +5,7 @@ Title: "NZPS-Observation-Results"
 Description: "This profile constrains the Observation resource to represent various types of results and associated observations in a patient summary. This is the base profile from which the other results profiles are derived."
 * ^version = "0.1.0"
 * ^status = #active
-* ^url = $nzps-observation-results
+
 
 
 

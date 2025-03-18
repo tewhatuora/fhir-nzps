@@ -5,7 +5,7 @@ Title: "NZPS-Communication"
 Description: "The NZPS Communication is a profile for the FHIR Communication resource. It is used to record communication between a health professional and a patient or other person about their wishes for future care."
 * ^version = "0.1.0"
 * ^status = #active
-* ^url = $nzps-communication
+//* ^url = $nzps-communication
 
 * category ^short = "The type of message conveyed - this should be Patient story"
 * medium ^short = "How the communication was sent - for example verbal, written, on-behalf"

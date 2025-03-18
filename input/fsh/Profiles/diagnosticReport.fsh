@@ -5,4 +5,4 @@ Title: "NZPS-DiagnosticReport"
 Description: "This profile constrains the DiagnosticReport resource to represent diagnostic test and procedure reports in a patient summary."
 * ^version = "0.1.0"
 * ^status = #active
-* ^url = $nzps-diagnosticReport 
+

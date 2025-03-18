@@ -5,7 +5,7 @@ Title: "NZPS-Observation-Pregnancy-EDD"
 Description: "This profile constrains the Observation resource to represent the pregnancy expected delivery date."
 * ^version = "0.1.0"
 * ^status = #active
-* ^url = $nzps-observation-pregnancy-edd
+
 * subject only Reference ($nzps-patient)
 
 

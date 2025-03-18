@@ -8,6 +8,3 @@ Where a propensity is identified, to record information or evidence about a reac
 
 * ^version = "0.1.0"
 * ^status = #active
-* ^url = "https://standards.digital.health.nz/fhir/StructureDefinition/nzps-allergyintolerance"
-
-//allergyIntolerance doesn't cover adverse reactions - should we include the resource? what section? do we define our own?

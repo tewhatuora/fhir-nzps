@@ -4,7 +4,7 @@ Id: nzps-problem
 Title: "NZPS-Problem (Condition)"
 Description: "NZPS problem (FHIR Condition resource). This profile derives from the [International Patient Summary](https://build.fhir.org/ig/HL7/fhir-ips/) Condition resource used to document a health problem, with localisations using international and NZ Government standards for the NZ context."
 
-* ^url = $nzps-condition
+
 
 // Problem Manifestation code == evidence.code? do we need to clarify that?
 // 

@@ -6,5 +6,3 @@ Description: "The NZ International Patient Summary patient resource. This profil
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
 * ^extension[=].valueCanonical = "http://hl7.org.nz/fhir/StructureDefinition/NzPractitioner"
-
-* ^url = $nzps-practitioner

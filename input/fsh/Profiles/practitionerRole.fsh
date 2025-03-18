@@ -6,5 +6,3 @@ Description: "The NZ International PractitionerRole Summary patient resource. Th
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
 * ^extension[=].valueCanonical = "http://hl7.org.nz/fhir/StructureDefinition/NzPractitionerRole"
-
-* ^url = $nzps-practitionerRole

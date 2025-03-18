@@ -5,7 +5,7 @@ Title: "NZPS-Observation-Vaping-Status"
 Description: "This profile constrains the Observation resource to represent Vaping use in a patient summary."
 * ^version = "0.1.0"
 * ^status = #active
-* ^url = $nzps-observation-vaping
+
 // needs binding to SNOMED CT NZ Vaping status reference set
 
 * code 1..1 MS
