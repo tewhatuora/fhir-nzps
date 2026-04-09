@@ -22,7 +22,7 @@ Description: "A record of medication being taken is represented in the patient s
 
 * medicationCodeableConcept.coding[NZMT] from http://nzmt.org.nz/vs (preferred)
 * medicationCodeableConcept.coding[NZMT] ^short = "New Zealand Medicines Terminology"
-* medicationCodeableConcept.coding[NZMT].system = "http://nzmt.org.nz/vs" (exactly)
+* medicationCodeableConcept.coding[NZMT].system = "http://nzmt.org.nz" (exactly)
 * medicationCodeableConcept.coding[NZMT].extension contains http://hl7.org.nz/fhir/StructureDefinition/nzf-nzmt-type named nzf-nzmt-tpe 0..1
 
 * medicationCodeableConcept.coding[GTIN] from http://terminology.hl7.org/ValueSet/v3-GTIN (preferred)
