@@ -8,12 +8,14 @@ Description: "This profile represents the constraints applied to the Bundle reso
 // * ^url = $nzps-bundle
 
 * entry contains 
+    communication 0..* and
     encounter 0..* and
     observation-vaping-use 0..*
 
 * entry[allergyintolerance].resource only NZPSAllergyIntolerance
 * entry[careplan].resource only NZPSCarePlan
 * entry[clinicalimpression].resource only NZPSClinicalImpression
+* entry[communication].resource only NZPSCommunication
 * entry[composition].resource only NZPSComposition
 * entry[condition].resource only NZPSProblem
 * entry[diagnosticreport].resource only NZPSDiagnosticReport

@@ -99,6 +99,12 @@ Description: "Clinical document used to represent the NZPS data set. It is an el
 * section[sectionFunctionalStatus].entry[disability] only Reference(NZPSProblem)
 * section[sectionFunctionalStatus].entry[functionalAssessment] only Reference(NZPSClinicalImpression)
 
+* section[sectionPatientStory].emptyReason from $nzps-list-empty-reason-vs (preferred)
+* section[sectionPatientStory].entry ^slicing.discriminator[0].type = #profile
+* section[sectionPatientStory].entry ^slicing.discriminator[=].path = "resolve()"
+* section[sectionPatientStory].entry ^slicing.rules = #open
+* section[sectionPatientStory].entry contains communication 0..*
+
 * section[sectionPlanOfCare].code = $loinc#18776-5
 * section[sectionPlanOfCare].emptyReason from $nzps-list-empty-reason-vs (preferred)
 * section[sectionPlanOfCare].entry ^slicing.discriminator[0].type = #profile
