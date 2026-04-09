@@ -13,7 +13,7 @@ Description: "This profile constrains the Observation resource to represent Vapi
 
 * code = $nz-loinc#XNZ5556 "Vaping Status"
 * subject 1.. MS
-* subject only Reference($nzps-patient)
+* subject only Reference(NZPSPatient)
 * subject.reference 1.. MS
 * effective[x] 1..1 MS
 * effective[x] only dateTime
