@@ -2,7 +2,7 @@ Alias: $messagetypes = http://acme.org/messagetypes // would need to be a real C
 Alias: $v3-ParticipationMode = http://terminology.hl7.org/CodeSystem/v3-ParticipationMode
 
 Instance: NZPSCommunicationExampleTwo
-InstanceOf: Communication
+InstanceOf: NZPSCommunication
 Title: "NZPS Communication Patient Story Example two (one Communication Resource per content item)"
 Usage: #example
 
