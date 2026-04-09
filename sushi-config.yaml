@@ -89,7 +89,6 @@ menu:
   NZPS Structure: document-structure.html
   NZPS Mapping to FHIR: mapping.html
   NZPS Library: artifacts.html#structures-resource-profiles
-  HealthNZ NZPS API: OperationDefinition-NZPSSummaryOperation.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
