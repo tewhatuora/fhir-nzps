@@ -1,0 +1,18 @@
+[2026/04/09 12:04:21.754, java.exe (PID: 60268, TID: 61492), JavaEnvironment.cpp:502 (JavaEnvironment::detect)]
+	TRACE: Entering JavaEnvironment::detect
+[2026/04/09 12:04:21.761, java.exe (PID: 60268, TID: 61492), JavaEnvironment.cpp:519 (JavaEnvironment::detect)]
+	TRACE: Installed Java detected: version=; arch=64; productCode={26F4C2FF-9E0F-5FD4-B66B-1B13F1068A00}; type=1
+[2026/04/09 12:04:21.761, java.exe (PID: 60268, TID: 61492), JavaEnvironment.cpp:135 (`anonymous-namespace'::detectHomeDir)]
+	TRACE: Find home dir of {26F4C2FF-9E0F-5FD4-B66B-1B13F1068A00} Java installation
+[2026/04/09 12:04:21.762, java.exe (PID: 60268, TID: 61492), JavaEnvironment.cpp:302 (`anonymous-namespace'::detectFullVersion)]
+	TRACE: Detect full version of {26F4C2FF-9E0F-5FD4-B66B-1B13F1068A00} Java installation
+[2026/04/09 12:04:21.762, java.exe (PID: 60268, TID: 61492), JavaEnvironment.cpp:213 (`anonymous-namespace'::detectFullVersionFromMsi)]
+	TRACE: detectFullVersionFromMsi({26F4C2FF-9E0F-5FD4-B66B-1B13F1068A00})
+[2026/04/09 12:04:21.765, java.exe (PID: 60268, TID: 61492), JavaEnvironment.cpp:481 (`anonymous-namespace'::getInstalledJava)]
+	TRACE: InstalledJava(21.0.6+8|21.0.6+8|JDK|64bit|C:\Program Files\Java\jdk-21|{26F4C2FF-9E0F-5FD4-B66B-1B13F1068A00}|-10|)
+[2026/04/09 12:04:21.767, java.exe (PID: 60268, TID: 61492), JavaEnvironment.cpp:0 (JavaEnvironment::detect)]
+	TRACE: Exiting JavaEnvironment::detect (entered at JavaEnvironment.cpp:502)
+[2026/04/09 12:04:21.772, java.exe (PID: 60268, TID: 61492), Executor.cpp:706 (Executor2::startProcess)]
+	TRACE: CreateProcess(C:\Program Files\Java\jdk-21\bin\java.exe, "C:\Program Files\Java\jdk-21\bin\java.exe" -jar input-cache\publisher.jar -ig . -tx n/a) succeeded; PID=41380
+[2026/04/09 12:04:22.135, java.exe (PID: 60268, TID: 61492), Executor.cpp:667 (Executor2::execAndWait)]
+	TRACE: Process with PID=41380 terminated. Exit code=1

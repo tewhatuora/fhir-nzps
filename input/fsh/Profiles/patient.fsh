@@ -4,23 +4,6 @@ Id: nzps-patient
 Title: "NZPS-Patient"
 Description: "The NZ International Patient Summary patient resource. This profile derives from the [International Patient summary](https://build.fhir.org/ig/HL7/fhir-ips/) with localisations using international and NZ standards including the [FHIR NZ Base IG](https://fhir.org.nz), for use in the NZ context."
 
-/* 
-**Included Data**
-
-The person’s name, birth date and contact details, plus other identity, demographic, eligibility and enrolment information as recorded in the National Health Index (NHI) and National Enrolment System (NES) for everyone receiving public health services. The NHI number is the national health identifier and key to this information.
-
-**Usage and Interoperability**
-
-This data enables the person to engage with the health system and receive health services in person and online. Information is shared with the health system in secure and privacy-protecting ways to prove identity and eligibility, and to receive the right services. Having good demographic data is important to population health and public health.
-
-**Key use cases**
-
-- Identity, eligibility and enrolment
-- Bookings and appointments
-- Identifying people at risk by ethnicity, age, location, etc
-- Patient record transfer
-- Consumer access
-- Population health and public health */
 
 
 // switched to line up with NZbase
@@ -54,7 +37,7 @@ This data enables the person to engage with the health system and receive health
 
 // details of live nhi slice
 * identifier[NHI].system = "https://standards.digital.health.nz/ns/nhi-id" (exactly)
-* identifier[NHI].use = #offical (exactly)
+* identifier[NHI].use = #official (exactly)
 * identifier[NHI].use ^short = "fixed to official"
 * identifier[NHI] ^short = "The currently active NHI "
 * identifier[NHI] ^definition = "The NHI number is a unique number for all New Zealanders, assigned at birth"
