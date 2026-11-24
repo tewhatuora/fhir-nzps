@@ -1,145 +1,38 @@
 Profile: NZPSComposition
-Parent: http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips
+Parent: Composition
 Id: nzps-composition
 Title: "NZPS-Composition"
-Description: "Clinical document used to represent the NZPS data set. It is an electronic health record extract containing essential healthcare information about a subject of care. The NZIPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant."
+Description: "Clinical document used to represent the NZPS data set. It is an electronic health record extract containing essential healthcare information about a subject of care. The NZPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. This profile applies the requirements from [Composition (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips), with reference targets constrained to NZPS profiles. It is derived from the base Composition resource (rather than the IPS profile) because NZPS profiles based on NZ Base are not derived from the corresponding IPS profiles."
 * ^version = "0.1.0"
 * ^status = #active
-//* ^url = $nzps-composition
+* insert CompliesWithIPS(Composition-uv-ips)
 
-* subject only Reference(NZPSPatient)
+// ---------- IPS requirements (Composition-uv-ips 2.0.1, generated) ----------
+* insert IPSCompositionRequirements
 
+// ---------- NZ requirements ----------
 * section.emptyReason from $nzps-list-empty-reason-vs (preferred)
 
-* section contains sectionEncounter 0..1
-
-* section ^slicing.discriminator[0].type = #value
-* section ^slicing.discriminator[=].path = "code"
-* section ^slicing.ordered = false
-* section ^slicing.rules = #open
-
-* section[sectionMedications].code = $loinc#10160-0
-* section[sectionMedications].emptyReason from $nzps-list-empty-reason-vs (preferred)
-* section[sectionMedications].entry ^slicing.discriminator[0].type = #profile
-* section[sectionMedications].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionMedications].entry ^slicing.rules = #open
-* section[sectionMedications].entry[medicationStatementOrRequest] only Reference(NZPSMedicationStatement or NZPSMedicationRequest)
 * section[sectionMedications].entry contains medicationDispense 0..*
 * section[sectionMedications].entry[medicationDispense] only Reference(NZPSMedicationDispense)
 
-* section[sectionAllergies].code = $loinc#48765-2
-* section[sectionAllergies].emptyReason from $nzps-list-empty-reason-vs (preferred)
-* section[sectionAllergies].entry ^slicing.discriminator[0].type = #profile
-* section[sectionAllergies].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionAllergies].entry ^slicing.rules = #open
-* section[sectionAllergies].entry[allergyOrIntolerance] only Reference(NZPSAllergyIntolerance)
-* section[sectionAllergies].entry[allergyOrIntolerance] MS
-
-* section[sectionProblems].code = $loinc#11450-4
-* section[sectionProblems].emptyReason from $nzps-list-empty-reason-vs (preferred)
-* section[sectionProblems].entry ^slicing.discriminator[0].type = #profile
-* section[sectionProblems].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionProblems].entry ^slicing.rules = #open
-* section[sectionProblems].entry[problem] only Reference(NZPSProblem)
-* section[sectionProblems].entry[problem] MS
-
-* section[sectionProceduresHx].emptyReason from $nzps-list-empty-reason-vs (preferred)
-/* 
-* section[sectionProceduresHx].code = $loinc#47519-4
-* section[sectionProceduresHx].entry ^slicing.discriminator[0].type = #profile
-* section[sectionProceduresHx].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionProceduresHx].entry ^slicing.rules = #open
-* section[sectionProceduresHx].entry[procedure] only Reference($nzps-procedure) 
-*/
-* section[sectionImmunizations].code = $loinc#11369-6
-* section[sectionImmunizations].emptyReason from $nzps-list-empty-reason-vs (preferred)
-* section[sectionImmunizations].entry ^slicing.discriminator[0].type = #profile
-* section[sectionImmunizations].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionImmunizations].entry ^slicing.rules = #open
-* section[sectionImmunizations].entry[immunization] only Reference(NZPSImmunization)
-
-* section[sectionMedicalDevices].emptyReason from $nzps-list-empty-reason-vs (preferred)
-/*
-* section[sectionMedicalDevices].code = $loinc#46264-8
-* section[sectionMedicalDevices].entry ^slicing.discriminator[0].type = #profile
-* section[sectionMedicalDevices].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionMedicalDevices].entry ^slicing.rules = #open
-* section[sectionMedicalDevices].entry[deviceStatement] only Reference($DeviceUseStatement-au-ips)
-*/
-
-* section[sectionResults].code = $loinc#30954-2
-* section[sectionResults].emptyReason from $nzps-list-empty-reason-vs (preferred)
-* section[sectionResults].entry ^slicing.discriminator[0].type = #type
-* section[sectionResults].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionResults].entry ^slicing.discriminator[+].type = #profile
-* section[sectionResults].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionResults].entry ^slicing.rules = #open
-* section[sectionResults].entry[results-observation-laboratory-pathology] only Reference(NZPSObservationResultsLaboratoryPathology)
-* section[sectionResults].entry[results-diagnosticReport] only Reference(NZPSDiagnosticReport)
-
-* section[sectionVitalSigns].code = $loinc#8716-3
-* section[sectionVitalSigns].emptyReason from $nzps-list-empty-reason-vs (preferred)
-* section[sectionVitalSigns].entry ^slicing.discriminator[0].type = #profile
-* section[sectionVitalSigns].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionVitalSigns].entry ^slicing.rules = #open
-* section[sectionVitalSigns].entry[vitalSign] only Reference(NZPSObservationVitalSigns)
-
-* section[sectionPastProblems].code = $loinc#11348-0
-* section[sectionPastProblems].emptyReason from $nzps-list-empty-reason-vs (preferred)
-* section[sectionPastProblems].entry ^slicing.discriminator[0].type = #profile
-* section[sectionPastProblems].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionPastProblems].entry ^slicing.rules = #open
-* section[sectionPastProblems].entry[pastProblem] only Reference(NZPSProblem)
-
-* section[sectionFunctionalStatus].code = $loinc#47420-5
-* section[sectionFunctionalStatus].emptyReason from $nzps-list-empty-reason-vs (preferred)
-* section[sectionFunctionalStatus].entry ^slicing.discriminator[0].type = #profile
-* section[sectionFunctionalStatus].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionFunctionalStatus].entry ^slicing.rules = #open
-* section[sectionFunctionalStatus].entry[disability] only Reference(NZPSProblem)
 * section[sectionFunctionalStatus].entry[functionalAssessment] only Reference(NZPSClinicalImpression)
 
 // Patient Story follows IPS: narrative (text 1..1) carries the story; entries are optional and may be any
 // resource that supports the narrative (e.g. NZ Base RelatedPerson for important people). No NZ-specific entry profile.
-* section[sectionPatientStory].emptyReason from $nzps-list-empty-reason-vs (preferred)
 
-* section[sectionPlanOfCare].code = $loinc#18776-5
-* section[sectionPlanOfCare].emptyReason from $nzps-list-empty-reason-vs (preferred)
-* section[sectionPlanOfCare].entry ^slicing.discriminator[0].type = #profile
-* section[sectionPlanOfCare].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionPlanOfCare].entry ^slicing.rules = #open
 * section[sectionPlanOfCare].entry[carePlan] only Reference(NZPSCarePlan)
 
-* section[sectionSocialHistory].code = $loinc#29762-2
-* section[sectionSocialHistory].emptyReason from $nzps-list-empty-reason-vs (preferred)
-* section[sectionSocialHistory].entry ^slicing.discriminator[0].type = #profile
-* section[sectionSocialHistory].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionSocialHistory].entry ^slicing.rules = #open
-* section[sectionSocialHistory].entry[smokingTobaccoUse] only Reference(NZPSObservationSmokingStatus)
-* section[sectionSocialHistory].entry[alcoholUse] only Reference(NZPSObservationAlcoholUse)
-* section[sectionSocialHistory].entry contains vapingUse 0..1 
+* section[sectionSocialHistory].entry contains vapingUse 0..1
 * section[sectionSocialHistory].entry[vapingUse] only Reference(NZPSObservationVapingStatus)
 
-* section[sectionPregnancyHx].emptyReason from $nzps-list-empty-reason-vs (preferred)
-/*
-* section[sectionPregnancyHx].code = $loinc#10162-6
-* section[sectionPregnancyHx].entry ^slicing.discriminator[0].type = #profile
-* section[sectionPregnancyHx].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionPregnancyHx].entry ^slicing.rules = #open
-* section[sectionPregnancyHx].entry[pregnancyStatus] only Reference($nzps-observation-pregnancy-status)
-* section[sectionPregnancyHx].entry[pregnancyOutcome] only Reference($nzps-observation-pregnancy-outcome)
-*/
-* section[sectionAdvanceDirectives].code = $loinc#42348-3
-* section[sectionAdvanceDirectives].emptyReason from $nzps-list-empty-reason-vs (preferred)
-* section[sectionAdvanceDirectives].entry ^slicing.discriminator[0].type = #profile
-* section[sectionAdvanceDirectives].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionAdvanceDirectives].entry ^slicing.rules = #open
-* section[sectionAdvanceDirectives].entry[advanceDirectivesConsent] only Reference(Consent)
-
+// NZ additional section: recent encounters
+* section contains sectionEncounter 0..1
+* section[sectionEncounter] ^short = "NZPS Encounters Section"
+* section[sectionEncounter] ^definition = "The section contains a list of the patient's recent encounters (e.g. hospital admissions, specialist and GP visits) relevant to the summary."
 * section[sectionEncounter].code = $act-class#ENC
-* section[sectionEncounter].emptyReason from $nzps-list-empty-reason-vs (preferred)
 * section[sectionEncounter].entry ^slicing.discriminator[0].type = #profile
-* section[sectionEncounter].entry ^slicing.discriminator[=].path = "resolve()"
+* section[sectionEncounter].entry ^slicing.discriminator[0].path = "resolve()"
 * section[sectionEncounter].entry ^slicing.rules = #open
 * section[sectionEncounter].entry contains encounter 0..*
-
+* section[sectionEncounter].entry[encounter] only Reference(NZPSEncounter)

@@ -1,11 +1,29 @@
 Profile: NZPSMedicationRequest
-Parent: http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips
+Parent: http://hl7.org.nz/fhir/StructureDefinition/NzMedicationRequest
 Id: nzps-medicationrequest
 Title: "NZPS-MedicationRequest"
-Description: "MedicationRequest as referenced by the MedicationStatement resource constrained by this profile. Based on the IPS profile."
-
-* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
-* ^extension[=].valueCanonical = "http://hl7.org.nz/fhir/StructureDefinition/NzMedicationRequest"
+Description: "This profile represents a medication prescription or order in a New Zealand Patient Summary. It is based on the [NZ Base MedicationRequest](http://hl7.org.nz/fhir/StructureDefinition/NzMedicationRequest) profile, and applies the additional requirements from [MedicationRequest (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips)."
 
 * ^version = "0.1.0"
 * ^status = #active
+* insert CompliesWithIPS(MedicationRequest-uv-ips)
+
+// ---------- IPS requirements (MedicationRequest-uv-ips 2.0.1) ----------
+// medication[x]: the NZ Base (NZMT) preferred binding is retained in place of the IPS preferred binding.
+* doNotPerform = false
+* medication[x] MS
+* medication[x] only CodeableConcept or Reference(NZPSMedication)
+* medicationCodeableConcept only $CodeableConcept-uv-ips
+* insert IPSObligationsMS(medication[x])
+* subject MS
+* subject only Reference(NZPSPatient)
+* insert IPSObligationsMS(subject)
+* subject.reference 1..1 MS
+* insert IPSObligationsReference(subject.reference)
+* dosageInstruction MS
+* insert IPSObligationsMS(dosageInstruction)
+* dosageInstruction.text MS
+* insert IPSObligationsMS(dosageInstruction.text)
+* dosageInstruction.timing MS
+* insert IPSObligationsMS(dosageInstruction.timing)
+* dosageInstruction.route from http://hl7.org/fhir/ValueSet/route-codes (preferred)

@@ -1,14 +1,37 @@
 Profile: NZPSMedicationStatement
-Parent: http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips
+Parent: http://hl7.org.nz/fhir/StructureDefinition/NzMedicationStatement
 Id: nzps-medicationstatement
 Title: "NZPS-MedicationStatement"
-Description: "A record of medication being taken is represented in the patient summary as an instance of an MedicationStatement resource constrained by this profile. Based on the IPS profile."
+Description: "This profile represents a record of a medication being taken by the patient in a New Zealand Patient Summary. It is based on the [NZ Base MedicationStatement](http://hl7.org.nz/fhir/StructureDefinition/NzMedicationStatement) profile, and applies the additional requirements from [MedicationStatement (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips)."
 
 // some fields require the medication resource (e.g Medication batch number and Medication expiry date are recorded against a medication resource rather than the medication statement). Include?
 
-* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
-* ^extension[=].valueCanonical = "http://hl7.org.nz/fhir/StructureDefinition/NzMedicationStatement"
+* insert CompliesWithIPS(MedicationStatement-uv-ips)
 
+// ---------- IPS requirements (MedicationStatement-uv-ips 2.0.1) ----------
+// medication[x]: the NZ Base (NZMT) preferred binding is retained in place of the IPS preferred binding.
+* medication[x] MS
+* medication[x] only CodeableConcept or Reference(NZPSMedication)
+* medicationCodeableConcept only $CodeableConcept-uv-ips
+* insert IPSObligationsMS(medication[x])
+* subject MS
+* subject only Reference(NZPSPatient)
+* insert IPSObligationsMS(subject)
+* subject.reference 1..1 MS
+* insert IPSObligationsReference(subject.reference)
+* effective[x] 1..1 MS
+* insert IPSObligationsMS(effective[x])
+* effectiveDateTime MS
+* insert IPSObligationsDate(effectiveDateTime)
+* dosage MS
+* insert IPSObligationsMS(dosage)
+* dosage.text MS
+* insert IPSObligationsMS(dosage.text)
+* dosage.timing MS
+* insert IPSObligationsMS(dosage.timing)
+* dosage.route from http://hl7.org/fhir/ValueSet/route-codes (preferred)
+
+// ---------- NZ requirements ----------
 * ^version = "0.1.0"
 * ^status = #active
 

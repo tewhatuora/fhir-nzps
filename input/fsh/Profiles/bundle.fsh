@@ -1,36 +1,26 @@
 Profile: NZPSBundle
-Parent: http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips
+Parent: Bundle
 Id: nzps-bundle
 Title: "NZPS-Bundle"
-Description: "This profile represents the constraints applied to the Bundle resource for the New Zealand Patient summary and is based on the profile for the International Patient Summary (IPS) Document Bundle."
+Description: "This profile represents the constraints applied to the Bundle resource for the New Zealand Patient Summary document. It applies the requirements from [Bundle (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips), with entry resources constrained to NZPS profiles. It is derived from the base Bundle resource (rather than the IPS profile) because NZPS profiles based on NZ Base are not derived from the corresponding IPS profiles."
 * ^version = "0.1.0"
 * ^status = #active
-// * ^url = $nzps-bundle
+* insert CompliesWithIPS(Bundle-uv-ips)
+
+// ---------- IPS requirements (Bundle-uv-ips 2.0.1, generated) ----------
+* insert IPSBundleRequirements
+
+// ---------- NZ requirements ----------
+* entry[careplan].resource only NZPSCarePlan
+* entry[clinicalimpression].resource only NZPSClinicalImpression
 
 * entry contains
     encounter 0..* and
     observation-vaping-use 0..* and
     relatedperson 0..*
-
-* entry[allergyintolerance].resource only NZPSAllergyIntolerance
-* entry[careplan].resource only NZPSCarePlan
-* entry[clinicalimpression].resource only NZPSClinicalImpression
-* entry[composition].resource only NZPSComposition
-* entry[condition].resource only NZPSProblem
-* entry[diagnosticreport].resource only NZPSDiagnosticReport
+* entry[encounter].resource 1..
 * entry[encounter].resource only NZPSEncounter
-* entry[immunization].resource only NZPSImmunization
-* entry[medication].resource only NZPSMedication
-* entry[medicationrequest].resource only NZPSMedicationRequest
-* entry[medicationstatement].resource only NZPSMedicationStatement
-* entry[observation-results-laboratory-pathology].resource only NZPSObservationResultsLaboratoryPathology
-* entry[observation-tobacco-use].resource only NZPSObservationSmokingStatus
+* entry[observation-vaping-use].resource 1..
 * entry[observation-vaping-use].resource only NZPSObservationVapingStatus
-* entry[observation-vital-signs].resource only NZPSObservationVitalSigns
-* entry[organization].resource only NZPSOrganization
-* entry[patient].resource only NZPSPatient
-* entry[practitioner].resource only NZPSPractitioner
-* entry[practitionerrole].resource only NZPSPractitionerRole
+* entry[relatedperson].resource 1..
 * entry[relatedperson].resource only http://hl7.org.nz/fhir/StructureDefinition/NzRelatedPerson
-
-

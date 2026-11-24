@@ -1,9 +1,14 @@
 Profile: NZPSOrganization
-Parent: http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips
-Id: NZPS-organization
+Parent: http://hl7.org.nz/fhir/StructureDefinition/NzOrganization
+Id: nzps-organization
 Title: "NZPS-Organization"
-Description: "The NZ Patient Summary organisation resource. This profile derives from the [International Patient summary](https://build.fhir.org/ig/HL7/fhir-ips/) with localisations using international and NZ standards including the [FHIR NZ Base IG](https://fhir.org.nz), for use in the NZ context."
+Description: "This profile represents an organisation in a New Zealand Patient Summary. It is based on the [NZ Base Organization](http://hl7.org.nz/fhir/StructureDefinition/NzOrganization) profile, and applies the additional requirements from [Organization (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips)."
+* insert CompliesWithIPS(Organization-uv-ips)
 
-* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
-* ^extension[=].valueCanonical = "http://hl7.org.nz/fhir/StructureDefinition/NzOrganization"
-
+// ---------- IPS requirements (Organization-uv-ips 2.0.1) ----------
+* name 1..1 MS
+* insert IPSObligationsMS(name)
+* telecom MS
+* insert IPSObligationsMS(telecom)
+* address MS
+* insert IPSObligationsMS(address)

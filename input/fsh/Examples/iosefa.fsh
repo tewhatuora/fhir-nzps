@@ -247,7 +247,7 @@ Description: "Cindy, Iosefa's son, main support and digital navigator - referenc
 Instance: DrJamesTestSmith-Practitioner
 InstanceOf: Practitioner
 Usage: #inline
-* meta.profile = "https://fhir-ig.digital.health.nz/nzps/StructureDefinition/nzps-ppractitioner"
+* meta.profile = "https://fhir-ig.digital.health.nz/nzps/StructureDefinition/nzps-practitioner"
 * active = true
 * name.family = "Test-Smith"
 * name.given = "James"
@@ -256,7 +256,7 @@ Usage: #inline
 Instance: DrJamesTestSmith-PractitionerRole
 InstanceOf: PractitionerRole
 Usage: #inline
-* meta.profile = "https://fhir-ig.digital.health.nz/nzps/StructureDefinition/nzps-ppractitionerRole"
+* meta.profile = "https://fhir-ig.digital.health.nz/nzps/StructureDefinition/nzps-practitionerrole"
 * practitioner.reference = "urn:uuid:2ad89f2e-4205-4b68-a7f1-2d012de7e10b"
 * practitioner.display = "Dr James Test-Smith"
 * organization.reference = "urn:uuid:88c23f6b-6912-4ad6-8204-e175f1293c0a"

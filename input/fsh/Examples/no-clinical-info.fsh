@@ -137,7 +137,7 @@ Usage: #inline
 Instance: NZPSNoClinicalInfoPractitioner
 InstanceOf: Practitioner
 Usage: #inline
-* meta.profile = "https://fhir-ig.digital.health.nz/nzps/StructureDefinition/nzps-ppractitioner"
+* meta.profile = "https://fhir-ig.digital.health.nz/nzps/StructureDefinition/nzps-practitioner"
 * active = true
 * name.family = "Wilson"
 * name.given = "Hana"
@@ -145,7 +145,7 @@ Usage: #inline
 Instance: NZPSNoClinicalInfoOrganization
 InstanceOf: Organization
 Usage: #inline
-* meta.profile = "https://fhir-ig.digital.health.nz/nzps/StructureDefinition/NZPS-organization"
+* meta.profile = "https://fhir-ig.digital.health.nz/nzps/StructureDefinition/nzps-organization"
 * active = true
 * name = "Lakes Community Health Centre"
 

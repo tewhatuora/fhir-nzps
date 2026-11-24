@@ -1,60 +1,58 @@
 Profile: NZPSPatient
-Parent: http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
+Parent: http://hl7.org.nz/fhir/StructureDefinition/NzPatient
 Id: nzps-patient
 Title: "NZPS-Patient"
-Description: "The NZ International Patient Summary patient resource. This profile derives from the [International Patient summary](https://build.fhir.org/ig/HL7/fhir-ips/) with localisations using international and NZ standards including the [FHIR NZ Base IG](https://fhir.org.nz), for use in the NZ context."
+Description: "This profile represents the patient who is the subject of a New Zealand Patient Summary. It is based on the [NZ Base Patient](http://hl7.org.nz/fhir/StructureDefinition/NzPatient) profile, and applies the additional requirements from [Patient (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips)."
+* insert CompliesWithIPS(Patient-uv-ips)
 
+// ---------- NZ requirements (in addition to NZ Base) ----------
 
+// NHI: NZ Base defines the NHI identifier slice, binds NHI use to official | old (live | dormant),
+// and applies nz-pat-1 (only one official, i.e. live, NHI).
+* identifier[NHI] MS
+* identifier[NHI] ^short = "National Health Index (NHI) number - the live NHI (use = official) and any dormant NHIs (use = old)"
+* identifier[NHI] ^definition = "The NHI number is a unique number for all New Zealanders. An NHI becomes dormant when it is discovered that two NHIs exist for the same person; the NHIs are linked, one becomes live (use = official) and the other dormant (use = old)."
 
-// switched to line up with NZbase
-* gender.extension contains 
-    $originalText named originalText 0..1
+// ethnicity and iwi are defined in NZ Base; NZPS limits ethnicity to the 6 permitted by the HISO ethnicity data protocols
+* extension[ethnicity] 0..6
 
-// note using HL7 international birthplace extension. This doesn't line up with NHI exactly. 
-* extension contains 
-    $ethnicity named ethnicity 0..6 and
+// additional extensions
+// note: using the HL7 international birthPlace extension. This doesn't line up with the NHI exactly.
+* extension contains
     $maori-descent named maori-descent 0..1 and
-    $nz-iwi named iwi 0..* and
     $patient-birthPlace named birth-country 0..1
 
-* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
-* ^extension[=].valueCanonical = "http://hl7.org.nz/fhir/StructureDefinition/NzPatient"
+// ---------- IPS requirements (Patient-uv-ips 2.0.1) ----------
+* extension contains
+    http://hl7.org/fhir/StructureDefinition/individual-genderIdentity named genderIdentity 0..* and
+    http://hl7.org/fhir/StructureDefinition/individual-pronouns named personalPronouns 0..*
 
-// identifier slice for nhi
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.rules = #open
-* identifier ^slicing.description = "NHI number"
+* identifier MS
+* insert IPSObligationsMS(identifier)
+* name 1..* MS
+* name obeys ips-pat-1
+* insert IPSObligationsMS(name)
+* name.use MS
+* insert IPSObligationsMS(name.use)
+* name.text MS
+* insert IPSObligationsMS(name.text)
+* name.family MS
+* insert IPSObligationsMS(name.family)
+* name.given MS
+* insert IPSObligationsMS(name.given)
+* telecom MS
+* insert IPSObligationsMS(telecom)
+* gender MS
+* insert IPSObligationsMS(gender)
+* birthDate 1..1 MS
+* insert IPSObligationsMS(birthDate)
+* address MS
+* insert IPSObligationsMS(address)
+* generalPractitioner MS
+* insert IPSObligationsMS(generalPractitioner)
 
-// declare slices
-* identifier contains 
-    NHI 0..1 MS and
-    dormant 0..* MS
-
-// add nz address and nz telecom
-* address only NzAddress
-* telecom only NzContactPoint
-
-// details of live nhi slice
-* identifier[NHI].system = "https://standards.digital.health.nz/ns/nhi-id" (exactly)
-* identifier[NHI].use = #official (exactly)
-* identifier[NHI].use ^short = "fixed to official"
-* identifier[NHI] ^short = "The currently active NHI "
-* identifier[NHI] ^definition = "The NHI number is a unique number for all New Zealanders, assigned at birth"
-
-// details of dormant nhi slice
-* identifier[dormant].system = "https://standards.digital.health.nz/ns/nhi-id" (exactly)
-* identifier[dormant].use = #old (exactly)
-* identifier[dormant].use ^short = "fixed to old"
-* identifier[dormant] ^short = "NHI identifiers that have been deprecated for this Person"
-* identifier[dormant] ^definition = "An NHI of the person that is no longer in use.   An NHI becomes dormant when it is discovered that 2 NHIs exist for the same person. The NHIs are linked, one becomes ‘live’ the other ‘dormant’."
-
-
-// declare rule to say can't have more than 'official' (meaning live) NHI
-* obeys nz-pat-1
-
-// invariant for nz-pat-1 rule
-Invariant: nz-pat-1
-Expression: "Patient.identifier.where(system='https://standards.digital.health.nz/ns/nhi-id' and use='official').count() < 2"
+Invariant: ips-pat-1
+Description: "Patient.name.given, Patient.name.family or Patient.name.text SHALL be present"
+Expression: "family.exists() or given.exists() or text.exists()"
+XPath: "f:given or f:family or f:text"
 Severity: #error
-Description: "A patient can only have a one official (i.e. 'live') NHI"
