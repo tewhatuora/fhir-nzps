@@ -5,7 +5,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: tewhatuora.fhir.nzps
 canonical: https://fhir-ig.digital.health.nz/nzps
-name: nzps
+name: NZPS
 title: FHIR New Zealand Patient Summary IG
 description: Implementation guide for the New Zealand Patient Summary 
 status: draft # draft | active | retired | unknown
@@ -25,8 +25,8 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 
 dependencies:
-  hl7.fhir.uv.ips: 2.0.0
-  fhir.org.nz.ig.base: 3.0.1
+  hl7.fhir.uv.ips: 2.0.1
+  fhir.org.nz.ig.base: 3.1.0
 
 #
 # The pages property corresponds to IG.definition.page. SUSHI can

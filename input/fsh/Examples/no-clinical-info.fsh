@@ -36,43 +36,43 @@ Usage: #inline
 * meta.profile = "https://fhir-ig.digital.health.nz/nzps/StructureDefinition/nzps-composition"
 * status = #final
 * type = $loinc#60591-5 "Patient summary Document"
-* subject = Reference(NZPSNoClinicalInfoPatient)
+* subject.reference = "urn:uuid:6b58fcac-f2ff-4c11-9609-ec92265e6496"
 * date = "2026-04-09T10:15:00+12:00"
-* author = Reference(NZPSNoClinicalInfoPractitioner)
+* author.reference = "urn:uuid:29ea7d2c-0bb6-45c5-8b78-dd0e32b716fd"
 * title = "New Zealand Patient Summary"
-* custodian = Reference(NZPSNoClinicalInfoOrganization)
+* custodian.reference = "urn:uuid:53fcfe4b-c917-4d59-a245-269ba916d3aa"
 * section[0].title = "Medications"
 * section[=].code = $loinc#10160-0 "History of medication use Narrative"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">No known current medicines.</div>"
-* section[=].entry = Reference(NZPSNoKnownMedicationStatement)
+* section[=].entry.reference = "urn:uuid:f6230cd3-c0cc-4b98-b38e-1d1e2827e86c"
 * section[+].title = "Allergies and Intolerances"
 * section[=].code = $loinc#48765-2 "Allergies and adverse reactions Document"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">No known allergies.</div>"
-* section[=].entry = Reference(NZPSNoKnownAllergy)
+* section[=].entry.reference = "urn:uuid:6ae9df95-c5dd-4cca-a1f4-95ca3ddca0b1"
 * section[+].title = "Problems"
 * section[=].code = $loinc#11450-4 "Problem list Reported"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">No known current problems or disability.</div>"
-* section[=].entry = Reference(NZPSNoKnownProblem)
+* section[=].entry.reference = "urn:uuid:3d629d2a-8187-4e3d-bbef-1d885eb89a9d"
 * section[+].title = "Immunizations"
-* section[=].code = $loinc#11369-6 "History of immunizations"
+* section[=].code = $loinc#11369-6 "History of Immunization note"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">No immunization history is known for this example patient.</div>"
 * section[=].emptyReason = $list-empty-reason#nilknown "Nil Known"
 * section[+].title = "Results"
-* section[=].code = $loinc#30954-2 "Relevant diagnostic tests and/or laboratory data"
+* section[=].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">No diagnostic results are known for this example patient.</div>"
 * section[=].emptyReason = $list-empty-reason#nilknown "Nil Known"
 * section[+].title = "Vital Signs"
-* section[=].code = $loinc#8716-3 "Vital signs"
+* section[=].code = $loinc#8716-3 "Vital signs note"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">No vital signs are known for this example patient.</div>"
 * section[=].emptyReason = $list-empty-reason#nilknown "Nil Known"
 * section[+].title = "Past Problems"
-* section[=].code = $loinc#11348-0 "History of past illness Narrative"
+* section[=].code = $loinc#11348-0 "History of Past illness note"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">No past problems are known for this example patient.</div>"
 * section[=].emptyReason = $list-empty-reason#nilknown "Nil Known"
@@ -82,7 +82,7 @@ Usage: #inline
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Functional status has not been recorded for this example patient.</div>"
 * section[=].emptyReason = $list-empty-reason#notasked "Not Asked"
 * section[+].title = "Patient Story"
-* section[=].code = $loinc#81338-6 "Patient story"
+* section[=].code = $loinc#81338-6 "Patient Goals, Preferences, and Priorities for Care Experience"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">No patient story has been recorded for this example patient.</div>"
 * section[=].emptyReason = $list-empty-reason#notasked "Not Asked"
@@ -92,12 +92,12 @@ Usage: #inline
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">No active plan of care is known for this example patient.</div>"
 * section[=].emptyReason = $list-empty-reason#nilknown "Nil Known"
 * section[+].title = "Social History"
-* section[=].code = $loinc#29762-2 "Social history Narrative"
+* section[=].code = $loinc#29762-2 "Social history note"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Social history has not been recorded for this example patient.</div>"
 * section[=].emptyReason = $list-empty-reason#notasked "Not Asked"
 * section[+].title = "Advance Directives"
-* section[=].code = $loinc#42348-3 "Advance directives"
+* section[=].code = $loinc#42348-3 "Advance Healthcare Directives"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">No advance directives are known for this example patient.</div>"
 * section[=].emptyReason = $list-empty-reason#notasked "Not Asked"
@@ -156,7 +156,7 @@ Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * category = $condition-category#problem-list-item "Problem List Item"
 * code.text = "No known current problems or disability"
-* subject = Reference(NZPSNoClinicalInfoPatient)
+* subject.reference = "urn:uuid:6b58fcac-f2ff-4c11-9609-ec92265e6496"
 * recordedDate = "2026-04-09T10:15:00+12:00"
 
 Instance: NZPSNoKnownAllergy
@@ -166,7 +166,7 @@ Usage: #inline
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
 * verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
 * code.text = "No known allergies"
-* patient = Reference(NZPSNoClinicalInfoPatient)
+* patient.reference = "urn:uuid:6b58fcac-f2ff-4c11-9609-ec92265e6496"
 * recordedDate = "2026-04-09T10:15:00+12:00"
 
 Instance: NZPSNoKnownMedicationStatement
@@ -175,5 +175,5 @@ Usage: #inline
 * meta.profile = "https://fhir-ig.digital.health.nz/nzps/StructureDefinition/nzps-medicationstatement"
 * status = #active
 * medicationCodeableConcept.text = "No known current medications"
-* subject = Reference(NZPSNoClinicalInfoPatient)
+* subject.reference = "urn:uuid:6b58fcac-f2ff-4c11-9609-ec92265e6496"
 * effectiveDateTime = "2026-04-09T10:15:00+12:00"

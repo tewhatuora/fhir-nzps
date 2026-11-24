@@ -11,7 +11,7 @@ Description: "This profile constrains the Observation resource to represent Vapi
 * code 1..1 MS
 * code only $CodeableConcept-uv-ips
 
-* code = $nz-loinc#XNZ5556 "Vaping Status"
+* code = $nz-loinc#XNZ5556 "Vaping status"
 * subject 1.. MS
 * subject only Reference(NZPSPatient)
 * subject.reference 1.. MS
