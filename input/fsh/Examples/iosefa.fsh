@@ -2,6 +2,7 @@ Alias: $loinc = http://loinc.org
 Alias: $list-empty-reason = http://terminology.hl7.org/CodeSystem/list-empty-reason
 Alias: $ethnic-group-level-4-code = https://standards.digital.health.nz/ns/ethnic-group-level-4-code
 Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
+Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $nz-practitioner-role-code = https://standards.digital.health.nz/ns/nz-practitioner-role-code
 Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
@@ -93,6 +94,8 @@ Usage: #example
 * entry[=].resource = BodyWeight-Observation
 * entry[+].fullUrl = "urn:uuid:20d75447-07af-488b-aa51-6a49db24eeff"
 * entry[=].resource = SmokingStatus-Observation
+* entry[+].fullUrl = "urn:uuid:2ccdc880-872a-454a-b295-d0d562e7c831"
+* entry[=].resource = CindyFuimaono-RelatedPerson
 
 Instance: IosefaFuimaono-Composition
 InstanceOf: Composition
@@ -168,8 +171,9 @@ Usage: #inline
 * section[+].title = "Patient Story"
 * section[=].code = $loinc#81338-6 "Patient Goals, Preferences, and Priorities for Care Experience"
 * section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Iosefa is a 73-year-old Samoan man who speaks Samoan as his primary language. He lives in Hamilton and relies heavily on his next of kin Cindy Fuimaono. He uses a walking frame or electric scooter to get around and rarely leaves the home. Family is in the process of arranging a transfer to residential care.</p></div>"
-* section[=].emptyReason = $list-empty-reason#notasked "Not Asked"
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>I prefer to speak Samoan now, as speaking English has been hard for me since my fall.</p><p>I live with my five children. Cindy, my fa'afafine son, used to be a social worker and is now my main support. Cindy is also my \"digital navigator\" and helps me to do things online.</p><p>My aiga is spread across the world, but they all share in my care, economically and practically.</p><p>I was heavily involved in my church. My health makes me feel ashamed to be so dependent on the church, when I used to be the one who gave support. Different church groups still visit me regularly.</p><p>I use a walker or a scooter to get around, but I would prefer not to.</p><p>I struggle to keep track of my medicines and need help with this. I also struggle with monitoring my diabetes and managing my insulin. Cindy helps me with my diabetes test kit.</p><p>We have decided that I will move into residential care. I am nervous about this, but I know my aiga is struggling with my current condition and I want to help them.</p><p>People who are important to me:</p><ul><li>Cindy – my son, my main support and my digital navigator</li><li>My aiga, here and overseas</li><li>My church minister and church community</li><li>My GP, Dr James Test-Smith</li></ul></div>"
+* section[=].entry.reference = "urn:uuid:2ccdc880-872a-454a-b295-d0d562e7c831"
+* section[=].entry.display = "Cindy Fuimaono"
 * section[+].title = "Plan of Care"
 * section[=].code = $loinc#18776-5 "Plan of care note"
 * section[=].text.status = #generated
@@ -214,7 +218,7 @@ Usage: #inline
 * address.city = "Hamilton"
 * address.postalCode = "3214"
 * address.country = "NZ"
-* contact.relationship = $v2-0131#N "Next-of-kin"
+* contact.relationship = $v2-0131#N "Next-of-Kin"
 * contact.name.family = "Fuimaono"
 * contact.name.given = "Cindy"
 * contact.telecom.system = #phone
@@ -223,6 +227,22 @@ Usage: #inline
 * communication.language = urn:ietf:bcp:47#sm "Samoan"
 * generalPractitioner.reference = "urn:uuid:7cf77ce3-bf39-4c20-adf9-50628735ed60"
 * generalPractitioner.display = "Dr James Test-Smith"
+
+Instance: CindyFuimaono-RelatedPerson
+InstanceOf: RelatedPerson
+Usage: #inline
+Description: "Cindy, Iosefa's son, main support and digital navigator - referenced from the Patient Story section as a person who is important to the patient."
+* meta.profile = "http://hl7.org.nz/fhir/StructureDefinition/NzRelatedPerson"
+* active = true
+* patient.reference = "urn:uuid:dd47a319-fbd7-4836-ae29-2df9bf080407"
+* patient.display = "Iosefa Fuimaono"
+* relationship[0] = $v3-RoleCode#CHILD "child"
+* relationship[+] = $v2-0131#N "Next-of-Kin"
+* name.family = "Fuimaono"
+* name.given = "Cindy"
+* telecom.system = #phone
+* telecom.value = "021111111"
+* telecom.use = #mobile
 
 Instance: DrJamesTestSmith-Practitioner
 InstanceOf: Practitioner

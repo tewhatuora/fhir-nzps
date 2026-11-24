@@ -7,15 +7,14 @@ Description: "This profile represents the constraints applied to the Bundle reso
 * ^status = #active
 // * ^url = $nzps-bundle
 
-* entry contains 
-    communication 0..* and
+* entry contains
     encounter 0..* and
-    observation-vaping-use 0..*
+    observation-vaping-use 0..* and
+    relatedperson 0..*
 
 * entry[allergyintolerance].resource only NZPSAllergyIntolerance
 * entry[careplan].resource only NZPSCarePlan
 * entry[clinicalimpression].resource only NZPSClinicalImpression
-* entry[communication].resource only NZPSCommunication
 * entry[composition].resource only NZPSComposition
 * entry[condition].resource only NZPSProblem
 * entry[diagnosticreport].resource only NZPSDiagnosticReport
@@ -32,5 +31,6 @@ Description: "This profile represents the constraints applied to the Bundle reso
 * entry[patient].resource only NZPSPatient
 * entry[practitioner].resource only NZPSPractitioner
 * entry[practitionerrole].resource only NZPSPractitionerRole
+* entry[relatedperson].resource only http://hl7.org.nz/fhir/StructureDefinition/NzRelatedPerson
 
 
