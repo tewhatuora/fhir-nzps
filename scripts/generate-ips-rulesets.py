@@ -41,6 +41,7 @@ NZPS_FOR_IPS = {
     IPS + 'Observation-alcoholuse-uv-ips': 'NZPSObservationAlcoholUse',
     IPS + 'Observation-tobaccouse-uv-ips': 'NZPSObservationSmokingStatus',
     IPS + 'Observation-results-laboratory-pathology-uv-ips': 'NZPSObservationResultsLaboratoryPathology',
+    IPS + 'Flag-alert-uv-ips': 'NZPSFlag',
     CORE + 'vitalsigns': 'NZPSObservationVitalSigns',
 }
 

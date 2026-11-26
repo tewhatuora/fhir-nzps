@@ -27,8 +27,18 @@ elements and how they are represented.
 
 {% include cross-version-analysis.xhtml %}
 
-### Dependencies and relationship to other standards
+### Relationship to other standards
 
-The profiles in the NZPS are derived from the IPS profiles. The NZPS profiles also conform to constraints expressed in the [FHIR NZBase profiles](https://fhir.org.nz/ig/base/index.html). The IG has dependencies on the following packages: 
+NZPS localises the [International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/) 2.0.1 for Aotearoa New Zealand. Where [NZ Base](https://fhir.org.nz/ig/base/) defines a profile for a resource (for example Patient, Condition, Medication, Practitioner and Organization), the NZPS profile is derived from the NZ Base profile and declares that it also complies with the corresponding IPS profile. Where NZ Base has no profile, the NZPS profile is derived directly from the IPS profile. The NZPS Composition and Bundle are derived from the base FHIR resources and apply the IPS requirements, so that they can reference the NZ Base-derived profiles.
+
+The IG has dependencies on the following packages:
 
 {% include dependency-table.xhtml %}
+
+### Intellectual property statements
+
+{% include ip-statements.xhtml %}
+
+### Global profiles
+
+{% include globals-table.xhtml %}

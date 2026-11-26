@@ -21,6 +21,7 @@ Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation
 Instance: IosefaFuimaono-Bundle
 InstanceOf: Bundle
 Usage: #example
+Description: "A populated NZPS document for Iosefa Fuimaono (born 1950), who lives with type 2 diabetes, hypertension and gout, uses a walking aid after a hip fracture, and is preparing to move into residential care. It includes problems, medicines coded with NZMT, an allergy, immunisations, laboratory results, vital signs, social history, and a Patient Story section in his own words that references his son and main support, Cindy."
 * meta.profile = "https://fhir-ig.digital.health.nz/nzps/StructureDefinition/nzps-bundle"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:79c87f51-3fcc-437e-ad12-2ad2b95b2321"
@@ -629,7 +630,7 @@ Usage: #inline
 * meta.profile = "https://fhir-ig.digital.health.nz/nzps/StructureDefinition/nzps-observation-results-laboratory-pathology"
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
-* code.coding[0] = $loinc#4548-4 "Hemoglobin A1c/Hemoglobin.total in Blood"
+* code.coding[0] = $loinc#59261-8 "Hemoglobin A1c/Hemoglobin.total standardized per IFCC-RMP for CDT in Blood"
 * code.coding[+] = $sct#43396009 "Haemoglobin A1c measurement"
 * code.text = "HbA1c"
 * subject.reference = "urn:uuid:dd47a319-fbd7-4836-ae29-2df9bf080407"
@@ -644,7 +645,7 @@ Usage: #inline
 * meta.profile = "https://fhir-ig.digital.health.nz/nzps/StructureDefinition/nzps-observation-results-laboratory-pathology"
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
-* code.coding[0] = $loinc#18262-6 "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay"
+* code.coding[0] = $loinc#69419-0 "Cholesterol in LDL [Moles/volume] in Serum or Plasma by Direct assay"
 * code.coding[+] = $sct#113079009 "Low density lipoprotein cholesterol measurement"
 * code.text = "LDL cholesterol"
 * subject.reference = "urn:uuid:dd47a319-fbd7-4836-ae29-2df9bf080407"
@@ -659,7 +660,7 @@ Usage: #inline
 * meta.profile = "https://fhir-ig.digital.health.nz/nzps/StructureDefinition/nzps-observation-results-laboratory-pathology"
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
-* code.coding[0] = $loinc#2093-3 "Cholesterol [Mass/volume] in Serum or Plasma"
+* code.coding[0] = $loinc#14647-2 "Cholesterol [Moles/volume] in Serum or Plasma"
 * code.coding[+] = $sct#121868005 "Total cholesterol measurement"
 * code.text = "Total cholesterol"
 * subject.reference = "urn:uuid:dd47a319-fbd7-4836-ae29-2df9bf080407"
@@ -674,7 +675,7 @@ Usage: #inline
 * meta.profile = "https://fhir-ig.digital.health.nz/nzps/StructureDefinition/nzps-observation-results-laboratory-pathology"
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
-* code.coding[0] = $loinc#2085-9 "Cholesterol in HDL [Mass/volume] in Serum or Plasma"
+* code.coding[0] = $loinc#14646-4 "Cholesterol in HDL [Moles/volume] in Serum or Plasma"
 * code.coding[+] = $sct#28036006 "High density lipoprotein cholesterol measurement"
 * code.text = "HDL cholesterol"
 * subject.reference = "urn:uuid:dd47a319-fbd7-4836-ae29-2df9bf080407"

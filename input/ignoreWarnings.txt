@@ -3,3 +3,20 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+
+# searchform.html is supplied by the Te Whatu Ora IG template (template/content/searchform.html), not by this IG.
+# Its markup is not well-formed XHTML; this is a template issue to be fixed in the template repository.
+The html source is not well formed: Found "</a>" expecting "</img>" at line 34 column 177
+The html source is not well formed: Found "</div>" expecting "</body>" at line 79 column 10
+The html source is not well formed: Found "</div>" expecting "</body>" at line 80 column 9
+The html source is not well formed: Found "</div>" expecting "</body>" at line 109 column 8
+The html source is not well formed: Found "</div>" expecting "</body>" at line 111 column 12
+The html source is not well formed: Found "</div>" expecting "</body>" at line 112 column 20
+The html source is not well formed: Found "</div>" expecting "</body>" at line 113 column 16
+The html source is not well formed: Found "</div>" expecting "</body>" at line 115 column 12
+
+# OIDs are only needed for OID-based terminology/CDA use, which NZPS does not support.
+# These terminology resources are to be published and maintained on NZHTS, where any identifiers will be assigned.
+The resource CodeSystem/nzps-list-empty-reason-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+The resource ValueSet/nzps-list-empty-reason-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+The resource ValueSet/nzps-vaping-current-status should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)

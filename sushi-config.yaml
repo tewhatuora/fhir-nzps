@@ -27,6 +27,9 @@ publisher:
 dependencies:
   hl7.fhir.uv.ips: 2.0.1
   fhir.org.nz.ig.base: 3.1.0
+  # Explicit so the pinned extension versions (see pin-canonicals) don't drift with new releases.
+  # IPS 2.0.1 depends on 5.3.0 and NZ Base 3.1.0 on 5.2.0.
+  hl7.fhir.uv.extensions.r4: 5.4.0
 
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -74,6 +77,11 @@ pages:
 # parameters:
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
+#
+parameters:
+  # Where a canonical resolves to more than one loaded version (e.g. extensions 5.2.0 / 5.3.0 / 5.4.0),
+  # write the resolved version into the published canonical (url|version).
+  pin-canonicals: pin-multiples
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │

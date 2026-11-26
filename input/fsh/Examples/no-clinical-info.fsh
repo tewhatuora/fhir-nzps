@@ -10,6 +10,7 @@ Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/
 Instance: NZPSNoClinicalInfoBundle
 InstanceOf: Bundle
 Usage: #example
+Description: "An NZPS document for a patient with no known clinical information. The required Medications, Allergies and Intolerances, and Problems sections each carry an explicit 'no known' entry; the other sections are empty, with a short narrative and a section.emptyReason (Nil Known or Not Asked)."
 * meta.profile = "https://fhir-ig.digital.health.nz/nzps/StructureDefinition/nzps-bundle"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:8f718d0c-2b2d-4bc8-8f28-1fc4aa419501"

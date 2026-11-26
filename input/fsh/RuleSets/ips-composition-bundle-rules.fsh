@@ -356,7 +356,7 @@ RuleSet: IPSCompositionRequirements
 * section[sectionAlerts].entry ^short = "Alert information."
 * section[sectionAlerts].entry ^definition = "Contains alert information to be communicated. May optionally reference other resources in IPS."
 * section[sectionAlerts].entry contains alertsFlag 0..*
-* section[sectionAlerts].entry[alertsFlag] only Reference(http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips|2.0.1)
+* section[sectionAlerts].entry[alertsFlag] only Reference(NZPSFlag)
 * section contains sectionFunctionalStatus 0..1
 * section[sectionFunctionalStatus] MS
 * insert IPSObligation(section[sectionFunctionalStatus], Consumer, #SHOULD:display)
@@ -557,7 +557,7 @@ RuleSet: IPSBundleRequirements
 * entry[documentreference].resource only DocumentReference
 * entry contains flag 0..*
 * entry[flag].resource 1..
-* entry[flag].resource only http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips
+* entry[flag].resource only NZPSFlag
 * entry contains imagingstudy 0..*
 * entry[imagingstudy].resource 1..
 * entry[imagingstudy].resource only http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips
