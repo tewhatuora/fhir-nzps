@@ -48,7 +48,7 @@ pages:
     title: The FHIR NZPS Implementation Guide
   the-nzps.md: 
     title: NZPS contents
-  document-structure.md:
+  nzps-structure.md:
     title: NZPS Structure
   mapping.md:
     title: NZPS data blocks to FHIR resource mapping
@@ -94,7 +94,7 @@ parameters:
 menu:
   Home: index.html
   NZPS Content: the-nzps.html
-  NZPS Structure: document-structure.html
+  NZPS Structure: nzps-structure.html
   NZPS Mapping to FHIR: mapping.html
   NZPS Library: artifacts.html#structures-resource-profiles
 

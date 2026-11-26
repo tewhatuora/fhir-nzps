@@ -1,0 +1,34 @@
+@startuml
+
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam roundcorner 8
+skinparam nodesep 25
+skinparam ranksep 35
+skinparam ArrowColor #64788B
+
+skinparam rectangle {
+    BackgroundColor #E5EFE8
+    BorderColor #8AA496
+    FontColor #25384C
+}
+
+rectangle "**NZ Patient Summary**\nFHIR Document (Bundle)" #F5F7FA {
+
+    rectangle "**Composition**\n\nDocument context and clinical sections\n\nProblems | Allergies | Medications | Other sections" as Composition #DCE9F5
+
+    rectangle "**Patient**\n\nPatient identity\nand demographics" as Patient
+
+    rectangle "**Clinical resources**\n\nConditions, allergies,\nmedications, results..." as Clinical
+
+    rectangle "**Supporting resources**\n\nPractitioners,\norganisations, etc." as Supporting
+
+    Composition -down-> Patient
+    Composition -down-> Clinical : References
+    Composition -down-> Supporting
+
+    Patient -[hidden]right- Clinical
+    Clinical -[hidden]right- Supporting
+}
+
+@enduml

@@ -1,0 +1,64 @@
+@startuml
+
+title NZ Patient Summary FHIR Document Structure
+
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam classAttributeIconSize 0
+skinparam linetype polyline
+skinparam nodesep 65
+skinparam ranksep 50
+skinparam ArrowColor #52657A
+
+skinparam class {
+    BackgroundColor #DCE9F5
+    BorderColor #7193B3
+}
+
+skinparam rectangle {
+    BackgroundColor #F5F7FA
+    BorderColor #8293A6
+}
+
+hide empty members
+
+rectangle "«FHIR Resource»\n**Bundle**\ntype = 'document'\nentry: 2..*" as BundleBoundary {
+
+    class "Composition [1..1]" as Composition << (E,#ADD1B2) FHIR Resource >> {
+        {field} First Bundle entry
+        --
+        type.coding.system = 'http://loinc.org'
+        type.coding.code = '60591-5'
+    }
+
+    class "Patient [1..1]" as Patient << (E,#ADD1B2) FHIR Resource >> #E5EFE8
+
+    class Section << (B,#D3D3D3) BackboneElement >> {
+        title : string [1..1]
+        code : CodeableConcept [1..1]
+        text : Narrative [1..1]
+        emptyReason : CodeableConcept [0..1]
+    }
+
+    abstract class "Other resources [0..*]" as Resource << (A,#A9DCDF) FHIR Resource >> #E5EFE8
+
+    Composition -right-> Patient : subject
+
+    Composition *-down- "3..*" Section : section
+
+    Section -right-> "0..*" Resource : entry
+
+    Composition --> Resource : author, etc.
+
+    Resource --> Resource : References
+
+    Patient -[hidden]down- Resource
+}
+
+legend bottom
+    Enclosing boundary: Bundle membership
+    Filled diamond: Element containment
+    Directed arrow: FHIR Reference
+endlegend
+
+@enduml
