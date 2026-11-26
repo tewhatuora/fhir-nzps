@@ -14,6 +14,7 @@ Description: "This profile represents a health problem (FHIR Condition) in a New
 * category MS
 * category only $CodeableConcept-uv-ips
 * category from http://hl7.org/fhir/uv/ips/ValueSet/problem-type-uv-ips (extensible)
+* insert IPSAdditionalBinding(category, ips-condition-category-loinc-problem-type, #candidate, http://hl7.org/fhir/uv/ips/ValueSet/problem-type-loinc|2.0.1, An alternative additional binding to the LOINC \"Problem\" code - retained for backward compatibility.)
 * insert IPSObligationsMS(category)
 * severity MS
 * severity only $CodeableConcept-uv-ips

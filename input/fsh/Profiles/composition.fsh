@@ -2,7 +2,7 @@ Profile: NZPSComposition
 Parent: Composition
 Id: nzps-composition
 Title: "NZPS-Composition"
-Description: "Clinical document used to represent the NZPS data set. It is an electronic health record extract containing essential healthcare information about a subject of care. The NZPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. This profile applies the requirements from [Composition (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips), with reference targets constrained to NZPS profiles. It is derived from the base Composition resource (rather than the IPS profile) because NZPS profiles based on NZ Base are not derived from the corresponding IPS profiles."
+Description: "Clinical document used to represent the NZPS data set. It is an electronic health record extract containing essential healthcare information about a subject of care. The NZPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. This profile applies the requirements from [Composition (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips), with reference targets constrained to NZPS profiles. It is derived from the base Composition resource (rather than the IPS profile) because NZPS profiles are not derived from the corresponding IPS profiles."
 * ^version = "0.1.0"
 * ^status = #active
 * insert CompliesWithIPS(Composition-uv-ips)

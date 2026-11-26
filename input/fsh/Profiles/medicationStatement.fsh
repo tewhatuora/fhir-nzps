@@ -30,6 +30,7 @@ Description: "This profile represents a record of a medication being taken by th
 * dosage.timing MS
 * insert IPSObligationsMS(dosage.timing)
 * dosage.route from http://hl7.org/fhir/ValueSet/route-codes (preferred)
+* insert IPSAdditionalBinding(dosage.route, ips-medicine-route-of-administration, #candidate, http://hl7.org/fhir/uv/ips/ValueSet/medicine-route-of-administration|2.0.1, EDQM Route Terms)
 
 // ---------- NZ requirements ----------
 * ^version = "0.1.0"

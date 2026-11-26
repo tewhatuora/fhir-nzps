@@ -1,8 +1,8 @@
 // ---------------------------------------------------------------------------------------------
-// Rule sets used to carry IPS requirements into NZPS profiles that are based on NZ Base.
+// Rule sets used to carry IPS requirements into NZPS profiles.
 //
-// Approach (aligned with AU PS): where an NZ Base profile exists, the NZPS profile is derived from
-// it and applies the additional requirements of the corresponding IPS 2.0.1 profile (cardinality,
+// Approach (aligned with AU PS): the NZPS profile is derived from the NZ Base profile where one exists,
+// otherwise from the base FHIR resource, and applies the additional requirements of the corresponding IPS 2.0.1 profile (cardinality,
 // Must Support, types, invariants, obligations). Compliance with the IPS profile is asserted using
 // the structuredefinition-compliesWithProfile extension. NZPS profiles inherit the IPS obligations
 // and may strengthen, but not weaken, them.
@@ -40,3 +40,17 @@ RuleSet: IPSObligationsDate(path)
 * insert IPSObligation({path}, Creator, #SHOULD:able-to-populate)
 * insert IPSObligation({path}, Consumer, #SHALL:handle)
 * insert IPSObligation({path}, Consumer, #SHOULD:display)
+
+// IPS additional binding (http://hl7.org/fhir/tools/StructureDefinition/additional-binding) on an element, e.g.
+// * insert IPSAdditionalBinding(code, ips-allergy-intolerance-code-whoatc, #candidate, http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips|2.0.1, [documentation])
+// Escape commas in the documentation as \,
+RuleSet: IPSAdditionalBinding(path, key, purpose, valueSet, documentation)
+* {path} ^binding.extension[+].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+* {path} ^binding.extension[=].extension[+].url = "key"
+* {path} ^binding.extension[=].extension[=].valueId = "{key}"
+* {path} ^binding.extension[=].extension[+].url = "purpose"
+* {path} ^binding.extension[=].extension[=].valueCode = {purpose}
+* {path} ^binding.extension[=].extension[+].url = "valueSet"
+* {path} ^binding.extension[=].extension[=].valueCanonical = "{valueSet}"
+* {path} ^binding.extension[=].extension[+].url = "documentation"
+* {path} ^binding.extension[=].extension[=].valueMarkdown = "{documentation}"

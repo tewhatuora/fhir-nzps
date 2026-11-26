@@ -31,7 +31,10 @@ Description: "This profile represents the patient who is the subject of a New Ze
 * insert IPSObligationsMS(identifier)
 * name 1..* MS
 * name obeys ips-pat-1
-* insert IPSObligationsMS(name)
+// IPS: Creator SHALL:populate (not populate-if-known) on name
+* insert IPSObligation(name, Creator, #SHALL:populate)
+* insert IPSObligation(name, Consumer, #SHALL:handle)
+* insert IPSObligation(name, Consumer, #SHOULD:display)
 * name.use MS
 * insert IPSObligationsMS(name.use)
 * name.text MS

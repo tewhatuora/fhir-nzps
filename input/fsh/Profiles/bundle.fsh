@@ -2,7 +2,7 @@ Profile: NZPSBundle
 Parent: Bundle
 Id: nzps-bundle
 Title: "NZPS-Bundle"
-Description: "This profile represents the constraints applied to the Bundle resource for the New Zealand Patient Summary document. It applies the requirements from [Bundle (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips), with entry resources constrained to NZPS profiles. It is derived from the base Bundle resource (rather than the IPS profile) because NZPS profiles based on NZ Base are not derived from the corresponding IPS profiles."
+Description: "This profile represents the constraints applied to the Bundle resource for the New Zealand Patient Summary document. It applies the requirements from [Bundle (IPS)](http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips), with entry resources constrained to NZPS profiles. It is derived from the base Bundle resource (rather than the IPS profile) because NZPS profiles are not derived from the corresponding IPS profiles."
 * ^version = "0.1.0"
 * ^status = #active
 * insert CompliesWithIPS(Bundle-uv-ips)

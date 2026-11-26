@@ -29,7 +29,7 @@ elements and how they are represented.
 
 ### Relationship to other standards
 
-NZPS localises the [International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/) 2.0.1 for Aotearoa New Zealand. Where [NZ Base](https://fhir.org.nz/ig/base/) defines a profile for a resource (for example Patient, Condition, Medication, Practitioner and Organization), the NZPS profile is derived from the NZ Base profile and declares that it also complies with the corresponding IPS profile. Where NZ Base has no profile, the NZPS profile is derived directly from the IPS profile. The NZPS Composition and Bundle are derived from the base FHIR resources and apply the IPS requirements, so that they can reference the NZ Base-derived profiles.
+NZPS localises the [International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/) 2.0.1 for Aotearoa New Zealand. Where [NZ Base](https://fhir.org.nz/ig/base/) defines a profile for a resource (for example Patient, Condition, Medication, Practitioner and Organization), the NZPS profile is derived from the NZ Base profile and declares that it also complies with the corresponding IPS profile. Where NZ Base has no profile, the NZPS profile is derived from the base FHIR resource, applies the requirements of the IPS profile, and declares that it complies with the IPS profile. This means an NZPS profile can move to an NZ Base parent if NZ Base adds a profile for that resource later. The NZPS Composition and Bundle are also derived from the base FHIR resources and apply the IPS requirements, so that they can reference the NZPS profiles.
 
 The IG has dependencies on the following packages:
 

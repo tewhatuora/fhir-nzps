@@ -11,10 +11,12 @@ Description: "This profile represents a medication in a New Zealand Patient Summ
 // Medication.code: the NZ Base (NZMT) preferred binding is retained in place of the IPS preferred binding.
 * code 1..1 MS
 * code only $CodeableConcept-uv-ips
+* insert IPSAdditionalBinding(code, ips-medication-code-whoatc, #candidate, http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips|2.0.1, WHO ATC classification)
 * insert IPSObligationsMS(code)
 * form MS
 * form only $CodeableConcept-uv-ips
 * form from http://hl7.org/fhir/ValueSet/medication-form-codes (preferred)
+* insert IPSAdditionalBinding(form, ips-medicine-doseform, #candidate, http://hl7.org/fhir/uv/ips/ValueSet/medicine-doseform|2.0.1, EDQM Doseform Terms)
 * insert IPSObligationsMS(form)
 * ingredient MS
 * insert IPSObligationsMS(ingredient)

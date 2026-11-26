@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="391" viewBox="0 0 1100 391" role="img" aria-labelledby="title desc">
+<title id="title">NZPS Bundle profile</title>
+<desc id="desc">NZPS Bundle derives from FHIR R4 Bundle. Bundle (IPS) derives from FHIR R4 Bundle. NZPS Bundle declares compliance with Bundle (IPS) using compliesWithProfile and incorporates IPS and New Zealand patient summary requirements.</desc>
+<defs>
+  <marker id="base" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#375B72"/></marker>
+  <marker id="ips" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#804665"/></marker>
+</defs>
+<style>
+text { font-family: Arial, "Liberation Sans", sans-serif; }
+.code { font-family: "DejaVu Sans Mono", Consolas, monospace; }
+</style>
+<rect width="1100" height="391" fill="#FFFFFF"/>
+<text x="32" y="54" font-size="35" font-weight="700" fill="#152935" text-anchor="start">NZPS Bundle profile</text>
+<path d="M 283 216 V 124 H 400" fill="none" stroke="#375B72" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#base)"/>
+<path d="M 817 216 V 124 H 700" fill="none" stroke="#375B72" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#base)"/>
+<path d="M 433 249 H 667" fill="none" stroke="#804665" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6 5" marker-end="url(#ips)"/>
+<text x="324" y="108" font-size="15" font-weight="400" fill="#375B72" text-anchor="middle" class="code">baseDefinition</text>
+<text x="776" y="108" font-size="15" font-weight="400" fill="#375B72" text-anchor="middle" class="code">baseDefinition</text>
+<text x="550" y="235" font-size="15" font-weight="400" fill="#804665" text-anchor="middle" class="code">compliesWithProfile</text>
+<rect x="400" y="91" width="300" height="66" rx="10" fill="#F3F6F8" stroke="#BCCBD4" stroke-width="1.4"/>
+<text x="550.0" y="131.82" font-size="23" font-weight="700" fill="#284656" text-anchor="middle">FHIR R4 Bundle</text>
+<rect x="133" y="216" width="300" height="66" rx="10" fill="#00665F" stroke="#00665F" stroke-width="1.4"/>
+<text x="283.0" y="256.82" font-size="23" font-weight="700" fill="#FFFFFF" text-anchor="middle">NZPS Bundle</text>
+<rect x="667" y="216" width="300" height="66" rx="10" fill="#F8EEF4" stroke="#CCA7BB" stroke-width="1.4"/>
+<text x="817.0" y="256.82" font-size="23" font-weight="700" fill="#713553" text-anchor="middle">Bundle (IPS)</text>
+<rect x="133" y="310" width="834" height="53" rx="8" fill="#F3F8F7"/>
+<text x="550" y="343" font-size="18" font-weight="400" fill="#405763" text-anchor="middle">The NZPS Bundle profile incorporates IPS and New Zealand patient summary requirements.</text>
+</svg>

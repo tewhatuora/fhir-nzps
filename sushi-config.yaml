@@ -48,6 +48,8 @@ pages:
     title: The FHIR NZPS Implementation Guide
   the-nzps.md: 
     title: The NZ Patient Summary
+  general-guidance.md:
+    title: General Guidance
   nzps-structure.md:
     title: NZPS Structure
   mapping.md:
@@ -94,6 +96,7 @@ parameters:
 menu:
   Home: index.html
   The NZPS: the-nzps.html
+  General Guidance: general-guidance.html
   NZPS Structure: nzps-structure.html
   NZPS Mapping to FHIR: mapping.html
   NZPS Library: artifacts.html

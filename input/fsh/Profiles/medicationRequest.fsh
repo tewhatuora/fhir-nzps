@@ -27,3 +27,4 @@ Description: "This profile represents a medication prescription or order in a Ne
 * dosageInstruction.timing MS
 * insert IPSObligationsMS(dosageInstruction.timing)
 * dosageInstruction.route from http://hl7.org/fhir/ValueSet/route-codes (preferred)
+* insert IPSAdditionalBinding(dosageInstruction.route, ips-medicine-route-of-administration, #candidate, http://hl7.org/fhir/uv/ips/ValueSet/medicine-route-of-administration|2.0.1, EDQM Route Terms)
