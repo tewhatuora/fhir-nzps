@@ -1,23 +1,78 @@
-### Initial scope
+### Overview
 
-NZPS is an extensible data set specification that will build on the set of data blocks presented here. New requirements can be
-expected to emerge from IPS’s own further development, as well as from local initiatives. The initial scope of the NZPS covers the content areas shown in the data blocks below. 
+The NZ Patient Summary (NZPS) is a standardised summary of a person's key health information. It brings together the information a health professional most needs to know about a person, such as their current problems, medicines, allergies and immunisations, in a form that can be shared between systems and understood by its readers.
 
-{% include img.html img="initial-scope.png" caption="Figure 1: The NZPS initial contents" width="70%" %}
+The NZPS is minimal and non-exhaustive: it contains the essential information rather than the whole health record. It is specialty-agnostic and condition-independent.
 
-<br />
+The NZPS is based on the [International Patient Summary (IPS)](https://hl7.org/fhir/uv/ips/2.0.1/), the ISO and HL7® international standard for patient summaries, and adapts it for Aotearoa New Zealand. An NZ Patient Summary uses New Zealand identifiers and terminology, such as the National Health Index (NHI) number and the NZ Medicines Terminology (NZMT), and builds on the [NZ Base](https://fhir.org.nz/ig/base/) FHIR profiles. Because it complies with the IPS, an NZ Patient Summary can also be used where an IPS is expected.
 
-| Content area               | What it contains                                                                                                                                             |
-| -------------------------- | -------------------------------- |
-| Demographics               | The person’s name, birth date and contact details, plus other identity, demographic, eligibility and enrolment information as recorded in the National Health Index (NHI) and National Enrolment System (NES) for everyone receiving public health services. The NHI number is the national health identifier and key to this information.                                                                                                                                                                                                  |
-| Problems                   | Core personal health information centres on a concise statement of the problems and conditions affecting the person, including long term conditions and other current health issues. It includes pregnancy and can be an alert such as being immunocompromised.                                                                                                                                                                                                                                                                                   |
-| Medications                | Core personal health information includes structured and coded data about each of the prescription medications in the person’s current or recent use. The data set includes prescription and dispensing details, including the indication for the medicine and the dosage. Over-the-counter medicines, traditional medicines, alternative medicines and supplements can be included.                                                                                                                                                              |
-| Allergies & Intolerance    | Core personal health information includes a record of each known allergy or propensity for adverse reactions to some substance. All unresolved allergies and propensities are included. In each case, the medicine, food or other substance that is the causative agent is recorded, along with the manifestation of the allergy or adverse reaction, and its overall criticality. Some examples are a severe tongue swelling reaction to a certain medicine, an anaphylactic reaction to peanuts, a severe eye swelling reaction to cat allergen. |
-| Immunisations              | Core personal health information includes a record of each of the person’s vaccinations. This should be a complete history or as much as known. The vaccine product, target disease and details of each vaccination event are recorded. The forthcoming Aotearoa Immunisation Register (AIR) will be the system of record for all vaccinations received in New Zealand or overseas.                                                                                                                                                                |
-| Diagnostic results         | Test results relevant to the person’s health condition and risk, including pathology results, radiology results, medical imaging results, endoscopy reports, clinical results, consumer entered diagnostics and diagnostic results of all kinds. Some results are recorded in a time series.                                                                                                                                                                                                                                                       |
-| Smoking & vaping<br>       | The core personal health data set includes the person’s smoking and vaping status. Health professionals follow an ABC pathway to ask, offer brief advice and provide cessation support to anyone smoking, and these interventions are recorded.                                                                                                                                                                                                                                                                                                    |
-| Measurements & vital signs | The physiological measurements and vital signs that are important to the person’s life stage, health risks and conditions are recorded in the core personal health data set. These measurements include height, weight, heart rate, respiratory rate, blood pressure, body temperature, head circumference and body surface area, to name a few.                                                                                                                                                                                                   |
-| Care plans                 | A care plan in the context of a patient summary is a simple record of each consultation, test, treatment or other activity planned in managing some health condition or towards some health goal. For example, a care plan may exist to communicate a forward view of the planned care for a person with COVID. The same person may have other care plans for other conditions. Appointments, orders, referrals and discharge summaries are common sources of care plan data.                                                                      ||
-| Functional status          | An individual’s ability to perform normal daily activities required to meet basic needs, fulfil usual roles and maintain health and well-being |
-| Advance directives        |  Provision for healthcare decisions in the event that, in the future, a person is unable to make those decisions. Contains structured information related to the identity and address details of the decision maker and a description of all known patient's advance directives; this may reference a legal document. As there may be multiple directives it may be that the content is organized as a list. Furthermore, there may just be a reference to a document (sometimes known as a Living Will) rather than simple text. This reference may be an URL but is not restricted to just that form of reference.
-| Encounters                 | Core personal health information includes a record of the person’s recent encounters and interactions with health providers and the health system. This includes planned and unplanned encounters, in-person and online, at home or at a facility. Common types of encounter includes visits and online consultations with a GP, allied health professional or specialist.                                                                                                                                                                        |
+### What it's for
+
+This guide defines the NZPS as a FHIR document: a summary put together at a point in time, which can be sent, stored and read on its own. That suits situations where care moves from one provider to another and the receiving clinician needs a quick picture of the person, such as a referral, a transfer of care, or unplanned or emergency care where the person isn't known to the provider.
+
+A document isn't the right fit for every use of the NZPS data set. Giving people access to their own health information, for example, is usually better served by an API onto current data than by a static summary. Moving a person's whole record between providers needs the full record, not a minimal summary, although an NZPS can go with it. 
+
+The NZPS follows the IPS in treating the summary as information for the next provider, not a set of instructions. Prescriptions, dispensings and care plans in an NZ Patient Summary describe the person's care; they are not orders, and shouldn't be filled or acted on from the summary. The IPS notes that summaries are often used beyond this purpose and plans further guidance in [Context and usage of patient summaries](https://hl7.org/fhir/uv/ips/2.0.1/General-Principles.html#context-and-usage-of-patient-summaries).
+
+### What it contains
+
+An NZ Patient Summary identifies the person it is about and who wrote it, and is organised into sections, one for each content area. The sections follow the IPS, which classifies each as **required**, **recommended** or **optional**, and the NZPS adds one New Zealand section. A required section is always present, even if only to say that there is nothing to record. Recommended and optional sections are included when there is information to share.
+
+How the summary is structured as a FHIR document is described on the [NZPS Structure](nzps-structure.html) page, and the FHIR profiles used for each content area are listed on the [NZPS Mapping to FHIR](mapping.html) page.
+
+#### About the person and the summary
+
+| Content area | What it contains |
+|---|---|
+| Demographics | The person's identity and demographic details, including their NHI number, name, date of birth, gender, contact details and ethnicity. |
+| Author | Who wrote the summary and when, and the organisation responsible for it. |
+{:.grid}
+
+#### Required sections
+
+| Content area | What it contains |
+|---|---|
+| Problems | The person's current problems and conditions, including long-term conditions and other current health issues. |
+| Allergies & intolerances | Each known allergy or intolerance: the substance (such as a medicine, food or other substance), the reaction and its severity. |
+| Medications | The medicines the person is currently taking or has recently taken, with their dosage. Medicines are coded using NZMT where possible, and can be recorded as what the person is taking, as prescriptions or as dispensings. Over-the-counter medicines and supplements can be included. |
+{:.grid}
+
+#### Recommended sections
+
+| Content area | What it contains |
+|---|---|
+| Immunisations | The person's vaccinations, as complete a history as is known: the vaccine, the date and the disease it protects against. |
+| Diagnostic results | Test results relevant to the person's health, such as laboratory and pathology results, radiology and imaging results, and diagnostic reports. |
+| Procedures | Past procedures relevant to the summary, such as operations. |
+| Medical devices | Medical devices and implants the person uses or has. |
+{:.grid}
+
+#### Optional sections
+
+| Content area | What it contains |
+|---|---|
+| Alerts | Information that warns of a potential danger to or from the person, or of a potential obstacle to care. |
+| Functional status | The person's ability to carry out the activities of daily living, including any disabilities and the results of functional assessments. |
+| Past problems | Problems and conditions that have resolved or are no longer active. |
+| Pregnancy | Current pregnancy status, the expected delivery date, and the outcomes of previous pregnancies. |
+| Patient story | In the person's own words or as recorded with them: what matters to them, their goals and preferences for care, and the people who are important to them. |
+| Care plans | Plans for the person's care, including planned activities such as tests, treatments and immunisations. |
+| Smoking, vaping & alcohol use | The person's smoking status, vaping status and alcohol use. |
+| Measurements & vital signs | Measurements such as height, weight, body mass index, blood pressure, heart rate, respiratory rate, body temperature, oxygen saturation and head circumference. |
+| Advance directives | Decisions the person has made about their future care, in case they become unable to make those decisions. These can be recorded as structured information or as a reference to a document, such as a living will. |
+{:.grid}
+
+#### New Zealand section
+
+| Content area | What it contains |
+|---|---|
+| Encounters | The person's recent encounters with health providers and the health system, planned and unplanned, in person and online, such as GP visits, specialist appointments and hospital admissions. |
+{:.grid}
+
+### HISO 10099 NZ Patient Summary standard
+
+The NZPS was developed as the [HISO 10099:2022 NZ International Patient Summary (NZIPS) standard](https://consult.health.govt.nz/hiso/hiso-10099-2022-nzips/supporting_documents/hiso10099nzipsdraft20220509.pdf), which was published as a draft for consultation in May and July 2022. The mahi to develop the standard was guided by an expert advisory group and an industry special interest group, made up of health professionals, software experts and consumer representatives, who worked with HISO from October 2021 to review drafts and provide input.
+
+The NZPS is a deliverable of the [Interoperability Roadmap 2020](https://www.health.govt.nz/publication/hiso-100832020-interoperability-roadmap), and a standard that will contribute to a more joined-up and equitable health system. The Global Digital Health Partnership endorses the IPS and promotes its adoption by member countries, including New Zealand, as a pivotal standard for interoperability at national level and globally.
+
+The standard comprises a data set specification and related data exchange and data portability requirements, and was written with continuity of care, consumer access and patient record transfer in mind. This implementation guide covers the patient summary document. It has been updated since the 2022 draft to follow IPS 2.0.1, which includes the Alerts and Patient Story sections added in IPS 2.0, and to build on NZ Base.
