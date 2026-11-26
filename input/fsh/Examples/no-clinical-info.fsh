@@ -113,7 +113,7 @@ InstanceOf: Patient
 Usage: #inline
 * meta.profile = "https://fhir-ig.digital.health.nz/nzps/StructureDefinition/nzps-patient"
 * extension.url = "http://hl7.org.nz/fhir/StructureDefinition/nz-ethnicity"
-* extension.valueCodeableConcept = $nz-ethnic-group-codes#21111 "Maori"
+* extension.valueCodeableConcept = $nz-ethnic-group-codes#21111 "Māori"
 * identifier.use = #official
 * identifier.system = "https://standards.digital.health.nz/ns/nhi-id"
 * identifier.value = "ZMC3491"

@@ -47,7 +47,7 @@ pages:
   index.md:
     title: The FHIR NZPS Implementation Guide
   the-nzps.md: 
-    title: NZPS contents
+    title: The NZ Patient Summary
   nzps-structure.md:
     title: NZPS Structure
   mapping.md:
@@ -93,10 +93,10 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  NZPS Content: the-nzps.html
+  The NZPS: the-nzps.html
   NZPS Structure: nzps-structure.html
   NZPS Mapping to FHIR: mapping.html
-  NZPS Library: artifacts.html#structures-resource-profiles
+  NZPS Library: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
